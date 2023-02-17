@@ -6,4 +6,10 @@ export class User {
     numTel!: string;
     address!: string;
   }
-  
+  export interface Driver {
+    id: number
+    name: string
+    email: string
+    num: string
+    
+}

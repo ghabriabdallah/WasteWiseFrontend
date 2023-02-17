@@ -7,13 +7,19 @@ import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import { AddComponent } from './Driver/add/add.component';
+import { UpdateComponent } from './Driver/update/update.component';
+import { ViewComponent } from './Driver/view/view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    AddComponent,
+    UpdateComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,
