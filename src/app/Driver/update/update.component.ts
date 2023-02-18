@@ -3,6 +3,7 @@ import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AppService } from 'src/app/app.service';
 import { Driver } from 'src/app/user';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-updateuser',
