@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../../auth.service';
 import jwt_decode from 'jwt-decode';
 import { interval } from 'rxjs';
 
@@ -19,18 +19,13 @@ export class LoginComponent {
   username = '';
   password = '';
   errorMessage = '';
-  bgImages = [ 'url(assets/img/eco1.webp)', 'url(assets/img/eco2.jpg)', 'url(assets/img/eco3.jpg)' ];
   currentBgIndex = 0;
   
 
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  ngOnInit() {
-    interval(3000).subscribe(() => {
-      this.currentBgIndex = (this.currentBgIndex + 1) % this.bgImages.length;
-    });
-  }
+  
   
   onSubmit(): void {
     const loginData = { username: this.username, password: this.password };

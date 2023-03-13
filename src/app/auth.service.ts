@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { LoginData } from './login-data';
 import { AuthResponse } from './auth-response';
 import { User
- } from './user';
+ } from './User/user';
  import jwt_decode from 'jwt-decode';
 
 @Injectable({
