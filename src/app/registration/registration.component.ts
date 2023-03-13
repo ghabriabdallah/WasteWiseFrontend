@@ -33,7 +33,7 @@ export class RegistrationComponent implements OnInit {
 
     this.authService.register(this.user).subscribe(
       data => {
-        this.successMessage = 'User registered successfully';
+        this.successMessage = 'User registered successfully, now please login';
         this.errorMessage = '';
       },
       error => {

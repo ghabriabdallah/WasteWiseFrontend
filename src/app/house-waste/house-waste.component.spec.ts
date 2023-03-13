@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewComponent } from './view.component';
+import { HouseWasteComponent } from './house-waste.component';
 
-describe('ViewComponent', () => {
-  let component: ViewComponent;
-  let fixture: ComponentFixture<ViewComponent>;
+describe('HouseWasteComponent', () => {
+  let component: HouseWasteComponent;
+  let fixture: ComponentFixture<HouseWasteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ViewComponent ]
+      declarations: [ HouseWasteComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ViewComponent);
+    fixture = TestBed.createComponent(HouseWasteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

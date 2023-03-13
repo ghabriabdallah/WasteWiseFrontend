@@ -2,24 +2,24 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { RegistrationComponent } from './registration/registration.component';
-<<<<<<< HEAD
+import { AddComponent } from './Driver/add/add.component';
+
 import { LoginComponent } from './login/login.component';
+import { AdminGuard } from './admin.guard';
+import { UsersListComponent } from './users-list/users-list.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { DriversListComponent } from './drivers-list/drivers-list.component';
+
+
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'register', component: RegistrationComponent },
-  { path: 'login', component: LoginComponent}
-=======
-import { AdduserComponent } from './Driver/add/add.component';
-import { UpdateuserComponent } from './Driver/update/update.component';
-import { ViewusersComponent } from './Driver/view/view.component';
-const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'register', component: RegistrationComponent },
-  { path: 'view', component: ViewusersComponent },
-  { path: 'add', component: AdduserComponent },
-  { path: 'update', component: UpdateuserComponent },
->>>>>>> 2613e56838c40bacb968b14ed2e1386bdbec7609
+  { path: 'register', component: RegistrationComponent},
+  { path: 'addDriver', component: AddComponent , canActivate: [AdminGuard] },
+  { path: 'login', component: LoginComponent},
+  { path: 'usersList', component: UsersListComponent, canActivate: [AdminGuard]},
+  { path: 'driversList', component: DriversListComponent, canActivate: [AdminGuard]},
+  { path: 'adminDashboard', component: AdminDashboardComponent, canActivate: [AdminGuard]}
 ];
 
 @NgModule({

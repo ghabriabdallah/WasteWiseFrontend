@@ -1,15 +1,13 @@
 export class User {
+  id!: Int16Array;
     firstName!: string;
     lastName!: string;
     email!: string;
     password!: string;
     numTel!: string;
-    address!: string;
+    adress!: string;
+    role!: string;
+    uid!: Int16Array;
+    onDuty!: boolean;
   }
-  export interface Driver {
-    id: number
-    name: string
-    email: string
-    num: string
-    
-}
+ 

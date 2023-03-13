@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #006400	;
+  background-color: #006400;
 }
 
 .navbar-brand {
@@ -9,7 +9,6 @@
 }
 
 .navbar-brand img {
-  filter: invert(100%);
   height: 2rem;
   margin-right: 1rem;
   border: 2px solid #8B4513;
@@ -24,7 +23,6 @@
   text-shadow: 0 0 5px #F0E5CF;
 }
 
-
 .navbar-nav .nav-link {
   color: #8B4513;
 }
@@ -32,8 +30,8 @@
 .navbar-nav .nav-link:hover {
   color: #F0E5CF;
 }
+
 .logo-image {
-  filter: invert(100%);
   margin-right: 10px;
   border: 2px solid #8B4513;
   padding: 5px;

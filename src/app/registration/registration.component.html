@@ -1,41 +1,52 @@
-<div class="card">
-  <div class="card-header">Register</div>
-  <div *ngIf="successMessage" class="alert alert-success">{{successMessage}}</div>
-  <div *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</div>
-  <form (ngSubmit)="register()" #registerForm="ngForm">
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" required email>
-      <div *ngIf="registerForm.controls['email'].invalid && (registerForm.controls['email'].dirty || registerForm.controls['email'].touched)" class="text-danger">
-        <div *ngIf="registerForm.controls['email'].errors?.['required']">Email is required.</div>
-        <div *ngIf="registerForm.controls['email'].errors?.['email']">Invalid email address.</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card bg-dark text-white">
+      <img src="src\assets\img\eco3.jpg" class="card-img" alt="Background Image">
+      <div class="card-img-overlay">
+        <h5 class="card-title">Join Our Community</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
     </div>
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" required>
-      <div *ngIf="registerForm.controls['password'].invalid && (registerForm.controls['password'].dirty || registerForm.controls['password'].touched)" class="text-danger">
-        <div *ngIf="registerForm.controls['password'].errors?.['required']">Password is required.</div>
-        <div *ngIf="registerForm.controls['password'].errors?.['minlength']">Password should be at least 6 characters long.</div>
-        <div *ngIf="registerForm.controls['password'].errors?.['maxlength']">Password should be at most 30 characters long.</div>
-        <div *ngIf="registerForm.controls['password'].errors?.['invalidPassword']">Password should not contain special characters.</div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="firstName">First Name</label>
-      <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="user.firstName" required>
-    </div>
-    <div class="form-group">
-      <label for="lastName">Last Name</label>
-      <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="user.lastName" required>
-    </div>
-    <div class="form-group">
-      <label for="numTel">Phone Number</label>
-      <input type="text" class="form-control" id="numTel" name="numTel" [(ngModel)]="user.numTel" required>
-    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">Register</div>
+      <div *ngIf="successMessage" class="alert alert-success">{{successMessage}}</div>
+      <div *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</div>
+      <form (ngSubmit)="register()" #registerForm="ngForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" required email>
+          <div *ngIf="registerForm.controls['email'].invalid && (registerForm.controls['email'].dirty || registerForm.controls['email'].touched)" class="text-danger">
+            <div *ngIf="registerForm.controls['email'].errors?.['required']">Email is required.</div>
+            <div *ngIf="registerForm.controls['email'].errors?.['email']">Invalid email address.</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" required>
+          <div *ngIf="registerForm.controls['password'].invalid && (registerForm.controls['password'].dirty || registerForm.controls['password'].touched)" class="text-danger">
+            <div *ngIf="registerForm.controls['password'].errors?.['required']">Password is required.</div>
+            <div *ngIf="registerForm.controls['password'].errors?.['minlength']">Password should be at least 6 characters long.</div>
+            <div *ngIf="registerForm.controls['password'].errors?.['maxlength']">Password should be at most 30 characters long.</div>
+            <div *ngIf="registerForm.controls['password'].errors?.['invalidPassword']">Password should not contain special characters.</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="user.firstName" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="user.lastName" required>
+        </div>
+        <div class="form-group">
+          <label for="numTel">Phone Number</label>
+          <input type="text" class="form-control" id="numTel" name="numTel" [(ngModel)]="user.numTel" required>
+        </div>
     <div class="form-group">
       <label for="adress">Address</label>
-      <input type="text" class="form-control" id="adress" name="adress" [(ngModel)]="user.address" required>
+      <input type="text" class="form-control" id="adress" name="adress" [(ngModel)]="user.adress" required>
     </div>
     <button type="submit" class="btn btn-success" [disabled]="!registerForm.valid">Register</button>
     <button type="button" class="btn btn-secondary" (click)="registerForm.reset()">Reset</button>

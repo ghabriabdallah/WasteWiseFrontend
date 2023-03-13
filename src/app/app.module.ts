@@ -7,13 +7,20 @@ import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
-<<<<<<< HEAD
-import { FooterComponent } from './footer/footer.component';
-=======
-import { AdduserComponent } from './Driver/add/add.component';
-import { UpdateuserComponent } from './Driver/update/update.component';
-import { ViewusersComponent } from './Driver/view/view.component';
->>>>>>> 2613e56838c40bacb968b14ed2e1386bdbec7609
+import { AdminGuard } from './admin.guard';
+import { AddComponent } from './Driver/add/add.component';
+import { UsersListComponent } from './users-list/users-list.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { DriversListComponent } from './drivers-list/drivers-list.component'; 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { HouseWasteComponent } from './house-waste/house-waste.component';
+import { CommercialWasteComponent } from './commercial-waste/commercial-waste.component';
+import { OfficeWasteComponent } from './office-waste/office-waste.component';
+import { BuildingWasteComponent } from './building-waste/building-waste.component';
+
 
 @NgModule({
   declarations: [
@@ -21,22 +28,27 @@ import { ViewusersComponent } from './Driver/view/view.component';
     RegistrationComponent,
     HomeComponent,
     LoginComponent,
-<<<<<<< HEAD
-    FooterComponent
-=======
-    AppComponent,
-    UpdateuserComponent,
-    ViewusersComponent
->>>>>>> 2613e56838c40bacb968b14ed2e1386bdbec7609
+    AddComponent,
+    UsersListComponent,
+    ConfirmationDialogComponent,
+    AdminDashboardComponent,
+    DriversListComponent,
+    OurServicesComponent,
+    HouseWasteComponent,
+    CommercialWasteComponent,
+    OfficeWasteComponent,
+    BuildingWasteComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule // add HttpClientModule to the imports array
+    HttpClientModule,
+    MatDialogModule,
+    MatFormFieldModule 
   ],
-  providers: [],
+  providers: [[AdminGuard],],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

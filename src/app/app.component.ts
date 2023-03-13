@@ -15,5 +15,7 @@ export class AppComponent {
     this.authService.logout();
     this.router.navigate(['/login']);
   }
-
+  isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
+  }
 }

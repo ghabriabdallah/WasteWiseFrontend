@@ -1,6 +1,14 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import jwt_decode from 'jwt-decode';
+import { interval } from 'rxjs';
+
+
+interface DecodedToken {
+  role: string;
+  // add any other properties that the decoded token might have
+}
 
 @Component({
   selector: 'app-login',
@@ -11,19 +19,33 @@ export class LoginComponent {
   username = '';
   password = '';
   errorMessage = '';
+  bgImages = [ 'url(assets/img/eco1.webp)', 'url(assets/img/eco2.jpg)', 'url(assets/img/eco3.jpg)' ];
+  currentBgIndex = 0;
+  
+
 
   constructor(private authService: AuthService, private router: Router) {}
 
+  ngOnInit() {
+    interval(3000).subscribe(() => {
+      this.currentBgIndex = (this.currentBgIndex + 1) % this.bgImages.length;
+    });
+  }
+  
   onSubmit(): void {
     const loginData = { username: this.username, password: this.password };
     this.authService.login(loginData).subscribe(
       (response: any) => {
-        // store jwt token in local storage to keep user logged in between page refreshes
-        localStorage.setItem('jwtToken', response.token);
-        this.router.navigate(['/home']);
+        localStorage.setItem('token', response.token);
+        const decodedToken: DecodedToken = jwt_decode(response.token);
+        if (decodedToken.role.includes('USER') || decodedToken.role.includes('DRIVER')) {
+          this.router.navigate(['/home']);
+        } else if (decodedToken.role.includes('ADMIN')) {
+          this.router.navigate(['/adminDashboard']);
+        }
       },
       error => {
-        if (error.status === 403) {
+        if (error && error.status === 403) {
           this.errorMessage = 'Invalid email/password combination.';
         } else {
           this.errorMessage = 'An unexpected error occurred. Please try again later.';
@@ -31,5 +53,4 @@ export class LoginComponent {
       }
     );
   }
-  
 }

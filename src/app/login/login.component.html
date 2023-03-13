@@ -1,27 +1,40 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
 <div class="container">
-  <div class="card">
-    <div class="text-center mb-3">
-      <img src="assets\img\logo.png" alt="Logo" width="50">
-    </div>
-    <h2>Login</h2>
-    <form (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" [(ngModel)]="username" name="username" class="form-control" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control" required>
-      </div>
-      <div *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</div>
-      <button type="submit" class="btn btn-primary">Login</button>
-      <div class="mt-3">
-        <a href="#" class="text-muted">Forgot Password?</a>
-      </div>
-    </form>
-    <div class="text-center mt-3">
-      <span class="text-muted">Don't have an account yet?</span>
-      <a routerLink="/register">Sign up</a>
+  <div class="card commercial-card">
+    <h3 class="text-center mb-4">Welcome Back!</h3>
+    <div class="social-links">
+      <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
     </div>
   </div>
-</div>
+    <div class="card login-card">
+        <div class="text-center mb-3">
+          <img src="assets\img\logo.png" alt="Logo" width="50">
+        </div>
+        <h2 class="text-center mb-4">Login</h2>
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" [(ngModel)]="username" name="username" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control" required>
+          </div>
+          <div *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</div>
+          <button type="submit" class="btn btn-primary">Login</button>
+          <div class="mt-3">
+            <a href="#" class="text-muted">Forgot Password?</a>
+          </div>
+        </form>
+        <div class="text-center mt-3">
+          <span class="text-muted">Don't have an account yet?</span>
+          <a routerLink="/register">Sign up</a>
+        </div>
+      </div>
+  </div>
+  
