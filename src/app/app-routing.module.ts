@@ -10,6 +10,9 @@ import { UsersListComponent } from './User/users-list/users-list.component';
 import { AdminDashboardComponent } from './Admin/admin-dashboard/admin-dashboard.component';
 import { DriversListComponent } from './Driver/drivers-list/drivers-list.component';
 import { HouseWasteComponent } from './Services/house-waste/house-waste.component';
+import { BuildingWasteComponent } from './Services/building-waste/building-waste.component';
+import { OfficeWasteComponent } from './Services/office-waste/office-waste.component';
+import { CommercialWasteComponent } from './Services/commercial-waste/commercial-waste.component';
 
 
 
@@ -21,6 +24,9 @@ const routes: Routes = [
   { path: 'usersList', component: UsersListComponent, canActivate: [AdminGuard]},
   { path: 'driversList', component: DriversListComponent, canActivate: [AdminGuard]},
   { path: 'HouseWaste', component: HouseWasteComponent},
+  { path: 'BuildingWaste', component: BuildingWasteComponent},
+  { path: 'OfficeWaste', component: OfficeWasteComponent},
+  { path: 'CommercialWaste', component: CommercialWasteComponent},
 
   { path: 'adminDashboard', component: AdminDashboardComponent, canActivate: [AdminGuard]}
 ];
