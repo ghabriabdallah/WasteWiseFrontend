@@ -15,7 +15,7 @@
   
   h1 {
     font-size: 4rem;
-    color: #4d4d4d;
+    color: #ffffff;
     margin: 0;
   }
   
@@ -52,4 +52,14 @@
     transform: translateY(-0.5rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   }
-  
+  body {
+    background-image: url('src\assets\img\eco6.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    margin-left: calc((85vw - 100%) / 2);
+    margin-right: calc((85vw - 100%) / 2);
+  }

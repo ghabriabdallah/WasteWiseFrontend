@@ -1,16 +1,22 @@
-<div class="row">
-  <div class="col-md-6">
-    <div class="card bg-dark text-white">
-      <img src="src\assets\img\eco3.jpg" class="card-img" alt="Background Image">
-      <div class="card-img-overlay">
-        <h5 class="card-title">Join Our Community</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </div>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+
+<div class="container">
+  <div class="card commercial-card">
+    <h3 class="card-title">Join Our Community</h3>
+          <p class="card-text">We are the first waste removal company in Tunisia. We handle waste collection in a professional and environment friendly manner. We ensure all our customers receive first class waste removal services at affordable prices throughout Tunisia.</p>
+          <button type="button" routerLink="" class="btn btn-outline-light">Learn More</button>
   </div>
-  <div class="col-md-6">
-    <div class="card">
-      <div class="card-header">Register</div>
+
+
+
+  <div class="card registration-card">
+    <div class="text-center mb-3">
+      <img src="assets\img\logo.png" alt="Logo" width="50"><span class="waste">Waste</span><span class="wise">Wise</span>
+    </div>
       <div *ngIf="successMessage" class="alert alert-success">{{successMessage}}</div>
       <div *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</div>
       <form (ngSubmit)="register()" #registerForm="ngForm">
