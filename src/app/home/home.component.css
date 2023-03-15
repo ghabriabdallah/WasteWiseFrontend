@@ -76,17 +76,7 @@ header h1 {
 }
 
 /* Footer styles */
-footer {
-  background-color: #7D4A41;
-  color: #FFF;
-  padding: 20px;
-  text-align: center;
-}
 
-footer a {
-  color: #FFF;
-  margin-right: 10px;
-}
 /* Main styles */
 * {
   box-sizing: border-box;
@@ -222,4 +212,136 @@ body {
     opacity: 1;
   }
 }
+.dark-green {
+  background-color: #0a4a1d;
+  color: #fff;
+  padding: 30px 0;
+}
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 2rem;
+}
+
+.social-links {
+  display: flex;
+  margin-top: 10px;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.social-links li {
+  list-style: none;
+}
+
+.social-links li:first-child {
+  margin-left: 0;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin-top: 10px;
+  text-align: right;
+ 
+}
+
+.social-links a:hover {
+  color: #c0ffee;
+}
+
+.phone-number {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  text-align: right;
+}
+
+footer {
+  background-color: #003300;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.footer-logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.footer-logo img {
+  height: 40px;
+  vertical-align: middle;
+}
+
+.footer-text {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+  .footer-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .footer-links li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-links li {
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-links li:last-child {
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+.phone-number {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.phone-number {
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: flex-end;
+}
+ 
