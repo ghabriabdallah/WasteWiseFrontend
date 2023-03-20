@@ -37,7 +37,7 @@ body {
 }
 
 .commercial-card {
-  background-image: url('src\assets\img\eco5.jpg');
+  background-image: url('src/assets/img/eco5.jpg');
   color: rgb(68, 67, 67);
   background-size: cover;
   background-position: center;
