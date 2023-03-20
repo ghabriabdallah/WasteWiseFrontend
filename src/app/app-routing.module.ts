@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { RegistrationComponent } from './Authentification/registration/registration.component';
 import { AddComponent } from './Driver/add/add.component';
-
 import { LoginComponent } from './Authentification/login/login.component';
 import { AdminGuard } from './admin.guard';
 import { UsersListComponent } from './User/users-list/users-list.component';
@@ -13,6 +12,7 @@ import { HouseWasteComponent } from './Services/house-waste/house-waste.componen
 import { BuildingWasteComponent } from './Services/building-waste/building-waste.component';
 import { OfficeWasteComponent } from './Services/office-waste/office-waste.component';
 import { CommercialWasteComponent } from './Services/commercial-waste/commercial-waste.component';
+import { OurServicesComponent } from './Services/our-services/our-services.component';
 
 
 
@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'BuildingWaste', component: BuildingWasteComponent},
   { path: 'OfficeWaste', component: OfficeWasteComponent},
   { path: 'CommercialWaste', component: CommercialWasteComponent},
-
+  {path: 'OurServices', component: OurServicesComponent},
   { path: 'adminDashboard', component: AdminDashboardComponent, canActivate: [AdminGuard]}
 ];
 

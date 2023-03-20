@@ -1,0 +1,104 @@
+body {
+  
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    margin-left: calc((85vw - 100%) / 2);
+    margin-right: calc((95.2vw - 100%) / 2);
+  }
+
+
+  .title-banner {
+    text-align: center;
+    height: 600px;
+    background-image: url("src\assets\img\tn11.jpg")
+  }
+  
+  .title-banner img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .s1 {
+      font-size: 30px;
+      font-weight: 600;  
+      color: #ffffff;
+  }
+ .tn {
+    color: rgb(192, 3, 3);
+ }
+
+ .title-banner p {
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  color: aliceblue;
+  padding-left: 65px;
+ }
+
+
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.service-card {
+  width: 48%;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-image: url("src\assets\img\sr1.webp");
+}
+
+.service-card img {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.service-card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px #333;
+  }
+  
+
+.service-card p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.service-card .see-more {
+  display: inline-block;
+  background-color: #643000;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  font-family: 'Great Vibes', cursive;
+  font-size: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.service-card .see-more:hover {
+    background-color: #009900;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
