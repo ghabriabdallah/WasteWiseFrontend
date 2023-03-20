@@ -6,21 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./house-waste.component.css']
 })
 export class HouseWasteComponent implements OnInit {
-  
-
   currentImageIndex = 0;
-  images = [    'src/assets/img/eco2.jpg',  
-    'src/assets/img/eco3.jpg', 
-       'src/assets/img/house waste.png',  
-         'src/assets/img/housewaste.jpg',
-             'src/assets/img/housewaste4.png'];
+  images = [
+    'https://www.shutterstock.com/image-photo/woman-putting-banana-peel-recycling-600w-503888032.jpg',  
+    'https://www.shutterstock.com/image-vector/waste-collection-segregation-recycling-infographic-600w-1375164935.jpg', 
+    'https://www.shutterstock.com/image-vector/containers-garbage-different-types-cans-600w-714563575.jpg',  
+   
+  ];
 
-    
-    ngOnInit() {
-      setInterval(() => {
-        this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
-      }, 2000);
-    }
-  
+  ngOnInit() {
+    setInterval(() => {
+      this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
+    }, 3000); // Change interval to 3000ms (3 seconds)
+  }
 }
-

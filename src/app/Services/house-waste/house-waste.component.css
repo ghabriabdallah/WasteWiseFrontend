@@ -112,13 +112,7 @@
   color: #2ecc71;
   font-size: 20px;
 }
-.housewaste-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 50px;
-}
+
 
 .housewaste-image {
   position: relative;
@@ -179,81 +173,26 @@
   }
 }
 
-.housewaste-description {
-  width: 50%;
-  margin-left: 50px;
-}
 
-.housewaste-description h2 {
-  color: #2c3e50;
-}
 
-.housewaste-description p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #333;
-}
 
-.housewaste-description ul {
-  list-style: none;
-  margin-top: 20px;
-}
 
-.housewaste-description li {
-  margin-bottom: 10px;
-  font-size: 16px;
-  color: #666;
-}
 
-.subscribe-button {
-  text-align: center;
-  margin-top: 20px;
-}
 
-.zoom-button {
-  padding: 10px 20px;
-  background-color: #2ecc71;
-  color: #fff;
-  font-size: 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
 
-.zoom-button:hover {
-  transform: scale(1.1);
-}
-
-.green-button {
-  background-color: #2ecc71;
-  color: #fff;
-  font-size: 16px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.green-button:hover {
-  background-color: #27ae60;
-}
-
-.service-features {
-  list-style: none;
-  margin-top: 20px;
-  padding: 0;
-}
-
-.service-features li {
-  margin-bottom: 10px;
-  font-size: 16px;
-  color: #666;
-  position: relative;
-  padding-left: 25px;
-}
 
 .service-features li .green-tick {
   position: absolute;
   display: block;
+}
+:root {
+  --primary-color: #8BC34A; 
+  --secondary-color: #795548; 
+}
+h1 {
+  color: var(--primary-color);
+}
+
+button {
+  background-color: var(--secondary-color);
 }
