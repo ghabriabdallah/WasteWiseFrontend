@@ -1,11 +1,12 @@
-/* Body styles */
 body {
-  font-family: Arial, sans-serif;
+  background-size: cover;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  margin-left: calc((95.2vw - 100%) / 2);
+  margin-right: calc((95.2vw - 100%) / 2);
 }
 
-/* Header styles */
 header {
   background-color: #7D4A41;
   color: #FFF;
@@ -14,26 +15,27 @@ header {
 }
 
 header h1 {
+
   font-size: 36px;
   margin-bottom: 10px;
 }
 
-/* Introduction styles */
 .intro {
-  background-color: #E1DCCF;
+  margin-top: 5px;
+  border-radius: 50px;
+  text-align: center;
+  background-color: #ccba81;
   padding: 40px;
 }
 
-.intro h2 {
-  color: #7D4A41;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
 .intro p {
-  font-size: 16px;
+  font-size: 19px;
+  font-weight: 500;
+  text-shadow: 0 0 10px #1e970e88;
   line-height: 1.5;
+  margin-top: 20px;
   margin-bottom: 20px;
+  color: #0f5a08;
 }
 
 /* Services styles */
@@ -96,6 +98,8 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-left: calc((85vw - 100%) / 2);
+  margin-right: calc((95.2vw - 100%) / 2);
 }
 
 .hero::before {
@@ -110,7 +114,8 @@ body {
 
 .hero h1 {
   color: #fff;
-  font-size: 4rem;
+  text-shadow: 0 0 5px #F0E5CF;
+  font-size: 5rem;
   text-transform: uppercase;
   position: relative;
   width: 100%;
@@ -345,3 +350,7 @@ footer {
   justify-content: flex-end;
 }
  
+.qw {
+  margin-top: 10px;
+  border-radius: 20px;
+}

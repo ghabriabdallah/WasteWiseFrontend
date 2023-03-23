@@ -5,15 +5,17 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    margin-left: calc((85vw - 100%) / 2);
+    margin-left: calc((95.2vw - 100%) / 2);
     margin-right: calc((95.2vw - 100%) / 2);
+    background-image: url("src\assets\img\dsrt.jpg")
   }
 
 
   .title-banner {
     text-align: center;
     height: 600px;
-    background-image: url("src\assets\img\tn11.jpg")
+    background-image: url("src\assets\img\tn11.jpg");
+    border-radius: 50px;
   }
   
   .title-banner img {
@@ -22,8 +24,9 @@ body {
   }
 
   .s1 {
-      font-size: 30px;
-      font-weight: 600;  
+      font-size: 65px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-weight: 400;  
       color: #ffffff;
   }
  .tn {
@@ -34,7 +37,7 @@ body {
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
   color: aliceblue;
-  padding-left: 65px;
+  padding-left: 10px;
  }
 
 
@@ -50,14 +53,14 @@ body {
 
 .service-card {
   width: 48%;
-  color: white;
+  color: rgb(27, 3, 3);
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   padding: 20px;
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  background-image: url("src\assets\img\sr1.webp");
+  background-color: #b7e92e;
 }
 
 .service-card img {
@@ -102,3 +105,200 @@ body {
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
   }
   
+  #wwlogo {
+    width: 130px;
+    height: 130px;
+  }
+  .introS{
+    padding-top: 30px;
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 5px #F0E5CF;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer a {
+    color: #fff;
+  }
+  
+  .footer i {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+  }
+  .subtitle {
+    font-size: 24px;
+    color: white; /* or your desired color */
+    animation: moveTitle 2.5s ease-in-out forwards;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .dark-green {
+    background-color: #0a4a1d;
+    color: #fff;
+    padding: 30px 0;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .logo {
+    height: 60px;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 2rem;
+  }
+  
+  .social-links {
+    display: flex;
+    margin-top: 10px;
+    text-align: right;
+    margin-top: 10px;
+  }
+  
+  .social-links li {
+    list-style: none;
+  }
+  
+  .social-links li:first-child {
+    margin-left: 0;
+  }
+  
+  .social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-top: 10px;
+    text-align: right;
+   
+  }
+  
+  .social-links a:hover {
+    color: #c0ffee;
+  }
+  
+  .phone-number {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-align: right;
+  }
+  
+  footer {
+    background-color: #003300;
+    color: #fff;
+    padding: 30px 0;
+  }
+  
+  .footer-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+  
+  .footer-logo img {
+    height: 40px;
+    vertical-align: middle;
+  }
+  
+  .footer-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+    .footer-links li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  
+    .footer-links li a {
+      color: #fff;
+      text-decoration: none;
+    }
+  
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .social-links li {
+      margin-right: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .social-links li:last-child {
+      margin-right: 0;
+      justify-content: center;
+      align-items: center;
+    }
+  
+  .phone-number {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .phone-number {
+    margin-bottom: 10px;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: flex-end;
+  }
+   
