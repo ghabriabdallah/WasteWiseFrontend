@@ -20,6 +20,7 @@ import { HouseWasteComponent } from './Services/house-waste/house-waste.componen
 import { CommercialWasteComponent } from './Services/commercial-waste/commercial-waste.component';
 import { OfficeWasteComponent } from './Services/office-waste/office-waste.component';
 import { BuildingWasteComponent } from './Services/building-waste/building-waste.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { BuildingWasteComponent } from './Services/building-waste/building-waste
     ReactiveFormsModule,
     HttpClientModule,
     MatDialogModule,
+    CommonModule,
     MatFormFieldModule 
   ],
   providers: [[AdminGuard],],

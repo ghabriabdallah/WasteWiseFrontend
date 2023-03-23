@@ -1,162 +1,149 @@
 .office-waste-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 50px auto;
-    max-width: 800px;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
   
-  .office-waste-image-container {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
+  .office-waste-content {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
   }
-  
-  .office-waste-image-container img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-  }
-  
-  .office-waste-description-container {
-    flex: 1;
-    padding: 20px;
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: justify;
-  }
-  .office-waste-image {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .office-waste-image.hidden {
-    opacity: 0;
-  }
-  .fade {
-    opacity: 10;
-    transition: opacity 2s ease-in-out;
-  }
-  .office-waste-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-  }
-  
-  .office-waste-image {
-    flex: 1;
-    text-align: center;
-      width: 100%;
-      height: auto;
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    }
     
-    
-  }
-  
-  .office-waste-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px #888888;
-    transition: opacity 0.5s ease-in-out;
-  }
-  .office-waste-image.fade {
-    opacity: 0;
-  }
-  
-  .office-waste-image img.hidden {
-    opacity: 0;
-  }
-  
-  .office-waste-description {
-    flex: 1;
-    padding: 20px;
-    color: #333333;
-  }
-  
-  .office-waste-description h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #2c3e50;
-  }
-  
-  .office-waste-description h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    color: #2c3e50;
-  }
-  
-  .office-waste-description p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 30px;
-  }
-  
-  .service-features {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .service-features li {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 10px;
+    .office-waste-container {
     position: relative;
-    padding-left: 35px;
-  }
-  
-  .service-features li:before {
-    content: "\2713";
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 24px;
-    color: #666;
-  }
-  
-  .subscribe-button {
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  .green-button {
-    background-color: #26734d;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 20px;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .green-button:hover {
-    background-color: #157b4e;
-    box-shadow: 0px 0px 10px #888888;
-  }
-  
-  .zoom-button {
-    transform: scale(1);
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .zoom-button:hover {
-    transform: scale(1.1);
-  }
-  .service-features li .green-tick {
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #2ecc71;
-    font-size: 20px;
-  }
+    }
+    
+    .hero {
+    height: 80vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+    .service-features {
+      margin-top: 2rem;
+      list-style: none;
+      text-align: center;
+    }
+    
+    .service-features li {
+      display: inline-block;
+      margin: 1rem;
+      font-size: 1.2rem;
+      color: #555;
+    }
+    
+    .service-features .green-tick {
+      font-size: 1.5rem;
+      color: #4CAF50;
+      margin-right: 0.5rem;
+    }
+    
+    /* Subscribe Button */
+    .subscribe-button {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    
+    .green-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+    
+    .green-button:hover {
+      transform: scale(1.1);
+    }
+    
+    .zoom-button {
+      animation: zoom 1s infinite alternate;
+    }
+    
+    @keyframes zoom {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.1);
+      }
+    }
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin: 20px;
+    }
+    
+    .card p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      color: #333;
+      margin-top: 20px;
+    
+    }
+    .office-waste-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px #000;
+    }
+    
+    .hero h1 {
+      color: #fff;
+      font-size: 4rem;
+      text-transform: uppercase;
+      position: relative;
+      width: 100%;
+      animation: moveTitle 2s ease-in-out forwards;
+    }
+    
+    @keyframes moveTitle {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+    .subtitle {
+      font-size: 24px;
+      color: white; /* or your desired color */
+      animation: moveTitle 2.5s ease-in-out forwards;
+    }
+    
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
