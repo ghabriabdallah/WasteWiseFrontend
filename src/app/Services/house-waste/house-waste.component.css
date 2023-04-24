@@ -101,16 +101,26 @@ h1 {
 }
 /* Service Features Section */
 .service-features {
-  margin-top: 2rem;
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.h3{
   text-align: center;
 }
-
 .service-features li {
   display: inline-block;
   margin: 1rem;
   font-size: 1.2rem;
   color: #555;
+  margin-bottom: 10px;
+
+  transition: all 0.2s ease-in-out;
+
+}
+.service-features li:hover {
+  transform: scale(1.2);
 }
 
 .service-features .green-tick {
@@ -168,4 +178,269 @@ h1 {
   color: #333;
   margin-top: 20px;
 
+}
+.service-features li:nth-child(2) {
+  color: #4aa9d9; /* Light green for plastic */
+}
+
+.service-features li:nth-child(3) {
+  color: #5E803A; /* Dark green for organic */
+}
+
+.service-features li:nth-child(4) {
+  color: #5D8AA8; /* Blue for glass */
+}
+
+.service-features li:nth-child(5) {
+  color: #D6C68F; /* Tan for wood */
+}
+
+.service-features li:nth-child(6) {
+  color: #555555; /* Gray for e-waste */
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card.bronze {
+  background: linear-gradient(to bottom, #f2d99a, #e5c665);
+}
+.card.silver {
+  background: linear-gradient(to bottom, #c5c5c5, #a5a5a5);
+}
+.card.gold {
+  background: linear-gradient(to bottom, #ffd700, #f6cd1c);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: #647df9;
+}
+.wrapper{
+  max-width: 1090px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.wrapper .table{
+  background: #fff;
+  width: calc(33% - 20px);
+  padding: 30px 30px;
+  position: relative;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.table .price-section{
+  display: flex;
+  justify-content: center;
+}
+.table .price-area{
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  padding: 2px;
+}
+.price-area .inner-area{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  line-height: 117px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.price-area .inner-area .text{
+  font-size: 25px;
+  font-weight: 400;
+  position: absolute;
+  top: -10px;
+  left: 17px;
+}
+.price-area .inner-area .price{
+  font-size: 45px;
+  font-weight: 500;
+  margin-left: 16px;
+}
+.table .package-name{
+  width: 100%;
+  height: 2px;
+  margin: 35px 0;
+  position: relative;
+}
+.table .package-name::before{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 25px;
+  font-weight: 500;
+  background: #fff;
+  padding: 0 15px;
+  transform: translate(-50%, -50%);
+}
+.table .features li{
+  margin-bottom: 15px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.features li .list-name{
+  font-size: 17px;
+  font-weight: 400;
+}
+.features li .icon{
+  font-size: 15px;
+}
+.features li .icon.check{
+  color: #2db94d;
+}
+.features li .icon.cross{
+  color: #cd3241;
+}
+.table .btn{
+  width: 100%;
+  display: flex;
+  margin-top: 35px;
+  justify-content: center;
+}
+.table .btn button{
+  width: 80%;
+  height: 50px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.table .btn button:hover{
+  border-radius: 5px;
+}
+.basic .features li::selection{
+  background: #CD7F32;
+}
+.basic ::selection,
+.basic .price-area,
+.basic .inner-area{
+  background: #CD7F32;
+}
+.basic .btn button{
+  border: 2px solid #CD7F32;
+  background: #fff;
+  color: #CD7F32;
+}
+.basic .btn button:hover{
+  background: #CD7F32;
+  color: #fff;
+}
+.premium ::selection,
+.premium .price-area,
+.premium .inner-area,
+.premium .btn button{
+  background: #c0c0c0 ;
+}
+.premium .btn button:hover{
+  background: #c0c0c0 ;
+}
+.ultimate ::selection,
+.ultimate .price-area,
+.ultimate .inner-area{
+  background: #FFD700;
+}
+.ultimate .btn button{
+  border: 2px solid #FFD700;
+  color: #FFD700;
+  background: #fff;
+}
+.ultimate .btn button:hover{
+  background: #FFD700;
+  color: #fff;
+}
+.basic .package-name{
+  background: #CD7F32;
+}
+.premium .package-name{
+  background: #c0c0c0 ;
+}
+.ultimate .package-name{
+  background: #FFD700;
+}
+.basic .package-name::before{
+  content: "Bronze";
+}
+.premium .package-name::before{
+  content: "Silver";
+  font-size: 24px;
+}
+.ultimate .package-name::before{
+  content: "Gold";
+  font-size: 24px;
+}
+@media (max-width: 1020px) {
+  .wrapper .table{
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 698px) {
+  .wrapper .table{
+    width: 100%;
+  }
+}
+::selection{
+  color: #fff;
+}
+.table .ribbon{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  overflow: hidden;
+}
+.table .ribbon::before,
+.table .ribbon::after{
+  position: absolute;
+  content: "";
+  z-index: -1;
+  display: block;
+  border: 7px solid #c0c0c0 ;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.table .ribbon::before{
+  top: 0px;
+  right: 15px;
+}
+.table .ribbon::after{
+  bottom: 15px;
+  left: 0px;
+}
+.table .ribbon span{
+  position: absolute;
+  top: 30px;
+  right: 0;
+  transform: rotate(-45deg);
+  width: 200px;
+  background: #c0c0c0 ;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.12);
 }
