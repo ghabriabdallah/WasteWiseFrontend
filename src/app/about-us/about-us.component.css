@@ -1,0 +1,21 @@
+.about-section {
+    background-color: #C7E1CC; /* light green background color */
+    padding: 50px;
+    color: #3D3D3B; /* dark brown text color */
+  }
+  
+  .about-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #4F4F4F; /* medium brown heading color */
+  }
+  
+  .about-section p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  
+  /* Add styles for any additional elements within the about section as needed */
+  

@@ -21,6 +21,7 @@ import { CommercialWasteComponent } from './Services/commercial-waste/commercial
 import { OfficeWasteComponent } from './Services/office-waste/office-waste.component';
 import { BuildingWasteComponent } from './Services/building-waste/building-waste.component';
 import { CommonModule } from '@angular/common';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { CommonModule } from '@angular/common';
     CommercialWasteComponent,
     OfficeWasteComponent,
     BuildingWasteComponent,
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,
