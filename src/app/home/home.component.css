@@ -43,6 +43,28 @@ header h1 {
   background-color: #FFF;
   padding: 40px;
 }
+.clientstitle{
+  color: #7D4A41;
+  font-size: 45px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.clients {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.photo-card {
+  margin: 10px;
+  text-align: center;
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 .services h2 {
   color: #7D4A41;

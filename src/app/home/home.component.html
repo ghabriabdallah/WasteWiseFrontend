@@ -1,53 +1,77 @@
 <section  class="hero" [ngStyle]="getHeroStyle()">
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="title">Waste Wise</h1>
-        <h3 class="subtitle">Your partner in waste management</h3>
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="title">Waste Wise</h1>
+      <h3 class="subtitle">Your partner in waste management</h3>
+    </div>
+  </div>
+</section>
+
+<img src="assets\img\qwn.png" width="100%" height="400px" class="qw">
+
+<h2 class="clientstitle">Who We Are?</h2>
+
+<section class="intro">
+  <div class="container">
+    <p>WasteWise is a waste removal and collection firm that handles both small and large-scale junk clearance operations for Tunisia homeowners and companies. We are completely committed to collecting and disposing of your trash in a professional manner.<br>We are capable of handling any project, no matter how large or small. While we are proud of our past, experience is nothing without expertise. We have the proper people to get the work done perfectly. We have teams with years of experience in all services. We're the ones to call whenever something needs to be done—anything has to be done. Our service focuses on delivering professional and environmentally friendly waste removal and collection in Tunisia. We'll keep you up to date on pricing and timelines throughout our straightforward process, because we want our consumers to fully comprehend the services we provide.</p>
+  </div>
+</section>
+
+<h2 class="clientstitle">Our Clients</h2>
+
+
+<div class="clients">
+  <div class="photo-card">
+    <span>Homeowners</span>
+    <img src="assets\img\familyHouse.webp" alt="Photo 1">
+  </div>
+  <div class="photo-card">
+    <span>Shop Owners</span>
+    <img src="assets\img\restaurantAvatar.jpg" alt="Photo 2">
+  </div>
+  <div class="photo-card">
+    <span>Office Owners</span>
+    <img src="assets\img\OfficeAgents.jpg" alt="Photo 3">
+  </div>
+  <div class="photo-card">
+    <span>Building contractors</span>
+    <img src="assets\img\construction-workers-team.png" alt="Photo 4">
+  </div>
+</div>
+
+
+<section class="services">
+  <div class="container">
+    <h2>What do we offer them?</h2>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12" routerLink="/HouseWaste" routerLinkActive="active">
+        <div class="service-card">
+          <img src="assets\img\housewaste.jpg" alt="House Waste Service">
+          <h3>House Waste Service</h3>
+          <p>We provide reliable and efficient waste removal services for households of all sizes.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12" routerLink="/CommercialWaste" routerLinkActive="active">
+        <div class="service-card">
+          <img src="assets\img\commercialwaste.jpg" alt="Commercial Waste Service">
+          <h3>Commercial Waste Service</h3>
+          <p>We provide cost-effective waste management solutions to businesses across all industries.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12" routerLink="/OfficeWaste" routerLinkActive="active">
+        <div class="service-card">
+          <img src="assets\img\officewaste.jpg" alt="Office Waste Service">
+          <h3>Office Waste Service</h3>
+          <p>We offer tailored waste management solutions to businesses of all sizes.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12" routerLink="/BuildingWaste" routerLinkActive="active">
+        <div class="service-card">
+          <img src="assets\img\buildingwaste.jpg" alt="Building Waste Service">
+          <h3>Building Waste Service</h3>
+          <p>Our team is equipped to handle all types of building waste, from construction debris to renovation waste.</p>
+        </div>
       </div>
     </div>
-  </section>
-
-  <img src="assets\img\qwn.png" width="100%" height="400px" class="qw">
-
-  <section class="intro">
-    <div class="container">
-      <p>WasteWise is a waste removal and collection firm that handles both small and large-scale junk clearance operations for Tunisia homeowners and companies. We are completely committed to collecting and disposing of your trash in a professional manner.</p>
-    </div>
-  </section>
-
-  <section class="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-12" routerLink="/HouseWaste" routerLinkActive="active">
-          <div class="service-card">
-            <img src="assets\img\housewaste.jpg" alt="House Waste Service">
-            <h3>House Waste Service</h3>
-            <p>We provide reliable and efficient waste removal services for households of all sizes.</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12" routerLink="/OfficeWaste" routerLinkActive="active">
-          <div class="service-card">
-            <img src="assets\img\officewaste.jpg" alt="Office Waste Service">
-            <h3>Office Waste Service</h3>
-            <p>We offer tailored waste management solutions to businesses of all sizes.</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12" routerLink="/BuildingWaste" routerLinkActive="active">
-          <div class="service-card">
-            <img src="assets\img\buildingwaste.jpg" alt="Building Waste Service">
-            <h3>Building Waste Service</h3>
-            <p>Our team is equipped to handle all types of building waste, from construction debris to renovation waste.</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12" routerLink="/CommercialWaste" routerLinkActive="active">
-          <div class="service-card">
-            <img src="assets\img\commercialwaste.jpg" alt="Commercial Waste Service">
-            <h3>Commercial Waste Service</h3>
-            <p>We provide cost-effective waste management solutions to businesses across all industries.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+  </div>
+</section>
