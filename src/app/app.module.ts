@@ -22,6 +22,7 @@ import { OfficeWasteComponent } from './Services/office-waste/office-waste.compo
 import { BuildingWasteComponent } from './Services/building-waste/building-waste.component';
 import { CommonModule } from '@angular/common';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     OfficeWasteComponent,
     BuildingWasteComponent,
     AboutUsComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,

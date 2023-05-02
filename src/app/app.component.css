@@ -278,18 +278,22 @@ footer {
   border-radius: 5px;
   padding: 10px;
 }
-.footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: #333;
-  color: #fff;
-  padding: 50px;
+footer {
+  background-color: #06360c;
+  color: #ccc;
+  padding: 40px 0;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 40px; /* add some space above the footer */
 }
 
 .footer .column {
   flex: 1;
   margin-right: 20px;
+}
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 .footer h3 {
@@ -297,18 +301,16 @@ footer {
   margin-bottom: 20px;
 }
 
-.footer ul {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.footer ul li a {
-  color: #fff;
-  text-decoration: none;
+ul li {
   margin-bottom: 10px;
-  display: block;
 }
+
 
 .footer p {
   margin-top: 20px;
