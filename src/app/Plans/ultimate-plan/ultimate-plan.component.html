@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="card mb-3">
+      <div class="card-header">
+        Personal Information
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #subscriptionForm="ngForm">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="subscription.firstName" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="subscription.lastName" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="subscription.email" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" name="address" [(ngModel)]="subscription.address" required>
+          </div>
+          <div class="form-group">
+            <label for="additionalAddress">Additional Address</label>
+            <input type="text" class="form-control" id="additionalAddress" name="additionalAddress" [(ngModel)]="subscription.additionalAddress">
+          </div>
+          <div class="form-group">
+            <label for="postalCode">Postal Code</label>
+            <input type="number" class="form-control" id="postalCode" name="postalCode" [(ngModel)]="subscription.postalCode" required>
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" name="city" [(ngModel)]="subscription.city" required>
+          </div>
+          <div class="form-group">
+            <label for="numTel">Phone Number</label>
+            <input type="tel" class="form-control" id="numTel" name="numTel" [(ngModel)]="subscription.numTel" required>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-header">
+        Visit Dates
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #subscriptionForm="ngForm">
+          <div class="form-group">
+            <label for="visitDate1">Visit Date 1</label>
+            <input type="date" class="form-control" id="visitDate1" name="visitDate1" [(ngModel)]="visitDates[0]">
+          </div>
+          <div class="form-group">
+            <label for="visitDate2">Visit Date 2</label>
+            <input type="date" class="form-control" id="visitDate2" name="visitDate2" [(ngModel)]="visitDates[1]">
+          </div>
+          <div class="form-group">
+            <label for="visitDate3">Visit Date 3</label>
+            <input type="date" class="form-control" id="visitDate3" name="visitDate3" [(ngModel)]="visitDates[2]">
+          </div>
+          <div class="form-group">
+            <label for="visitDate4">Visit Date 4</label>
+            <input type="date" class="form-control" id="visitDate4" name="visitDate4" [(ngModel)]="visitDates[3]">
+          </div>
+          <div class="form-group">
+            <label for="visitDate5">Visit Date 5</label>
+            <input type="date" class="form-control" id="visitDate5" name="visitDate5" [(ngModel)]="visitDates[4]">
+          </div>
+          <div class="form-group">
+            <label for="visitDate6">Visit Date 6</label>
+            <input type="date" class="form-control" id="visitDate6" name="visitDate6" [(ngModel)]="visitDates[5]">
+          </div>
+          <div class="form-group">
+            <label for="visitDate7">Visit Date 7</label>
+            <input type="date" class="form-control" id="visitDate7" name="visitDate7" [(ngModel)]="visitDates[6]">
+          </div>
+          <div class="form-group">
+            <label for="visitDate8">Visit Date 8</label>
+            <input type="date" class="form-control" id="visitDate8" name="visitDate8" [(ngModel)]="visitDates[7]">
+          </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!subscriptionForm.valid">Submit</button>
+      </form>
+    </div>

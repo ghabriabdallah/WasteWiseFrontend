@@ -22,6 +22,10 @@ import { OfficeWasteComponent } from './Services/office-waste/office-waste.compo
 import { BuildingWasteComponent } from './Services/building-waste/building-waste.component';
 import { CommonModule } from '@angular/common';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { SubscriptionFormComponent } from './subscription-form/subscription-form.component';
+import { BasicPlanComponent } from './Plans/basic-plan/basic-plan.component';
+import { PremiumPlanComponent } from './Plans/premium-plan/premium-plan.component';
+import { UltimatePlanComponent } from './Plans/ultimate-plan/ultimate-plan.component';
 
 
 @NgModule({
@@ -41,6 +45,10 @@ import { AboutUsComponent } from './about-us/about-us.component';
     OfficeWasteComponent,
     BuildingWasteComponent,
     AboutUsComponent,
+    SubscriptionFormComponent,
+    BasicPlanComponent,
+    PremiumPlanComponent,
+    UltimatePlanComponent,
   ],
   imports: [
     BrowserModule,

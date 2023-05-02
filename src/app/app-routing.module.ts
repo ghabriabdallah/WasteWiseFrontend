@@ -14,6 +14,10 @@ import { OfficeWasteComponent } from './Services/office-waste/office-waste.compo
 import { CommercialWasteComponent } from './Services/commercial-waste/commercial-waste.component';
 import { OurServicesComponent } from './Services/our-services/our-services.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { SubscriptionFormComponent } from './subscription-form/subscription-form.component';
+import { BasicPlanComponent } from './Plans/basic-plan/basic-plan.component';
+import { PremiumPlanComponent } from './Plans/premium-plan/premium-plan.component';
+import { UltimatePlanComponent } from './Plans/ultimate-plan/ultimate-plan.component';
 
 
 const routes: Routes = [
@@ -29,6 +33,10 @@ const routes: Routes = [
   { path: 'CommercialWaste', component: CommercialWasteComponent},
   {path: 'OurServices', component: OurServicesComponent},
   {path: 'About-us', component: AboutUsComponent},
+  {path: 'subscriptionForm', component: SubscriptionFormComponent},
+  {path: 'basicPlan', component: BasicPlanComponent},
+  {path: 'premiumPlan', component: PremiumPlanComponent},
+  {path: 'ultimatePlan', component: UltimatePlanComponent},
   { path: 'adminDashboard', component: AdminDashboardComponent, canActivate: [AdminGuard]}
 ];
 
