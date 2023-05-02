@@ -14,7 +14,6 @@ import { OfficeWasteComponent } from './Services/office-waste/office-waste.compo
 import { CommercialWasteComponent } from './Services/commercial-waste/commercial-waste.component';
 import { OurServicesComponent } from './Services/our-services/our-services.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 const routes: Routes = [
@@ -30,7 +29,6 @@ const routes: Routes = [
   { path: 'CommercialWaste', component: CommercialWasteComponent},
   {path: 'OurServices', component: OurServicesComponent},
   {path: 'About-us', component: AboutUsComponent},
-  {path: 'Contact-us', component: ContactUsComponent},
   { path: 'adminDashboard', component: AdminDashboardComponent, canActivate: [AdminGuard]}
 ];
 

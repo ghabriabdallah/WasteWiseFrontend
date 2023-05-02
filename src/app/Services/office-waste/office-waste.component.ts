@@ -17,6 +17,9 @@ images = [
 
 
 ];
+visitDates = [4, 6, 8];
+plan!: string;
+
 ngOnInit() {
   setInterval(() => {
   this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
@@ -32,6 +35,9 @@ ngOnInit() {
     'position': 'relative',
     'transition': 'background-image 1s ease-in-out'
     };
+    }
+    onPlanSelected(plan: string) {
+      this.plan = plan;
     }
     
     }
