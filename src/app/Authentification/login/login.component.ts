@@ -34,7 +34,7 @@ export class LoginComponent {
         localStorage.setItem('token', response.token);
         const decodedToken: DecodedToken = jwt_decode(response.token);
         if (decodedToken.role.includes('USER') || decodedToken.role.includes('DRIVER')) {
-          this.router.navigate(['/home']);
+          this.router.navigate(['']);
         } else if (decodedToken.role.includes('ADMIN')) {
           this.router.navigate(['/adminDashboard']);
         }

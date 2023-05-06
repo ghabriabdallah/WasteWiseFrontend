@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxFileDropModule } from 'ngx-file-drop';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,11 @@ import { OfficeWasteComponent } from './Services/office-waste/office-waste.compo
 import { BuildingWasteComponent } from './Services/building-waste/building-waste.component';
 import { CommonModule } from '@angular/common';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { BasicPlanComponent } from './Plans/basic-plan/basic-plan.component';
+import { PremiumPlanComponent } from './Plans/premium-plan/premium-plan.component';
+import { UltimatePlanComponent } from './Plans/ultimate-plan/ultimate-plan.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -41,6 +47,11 @@ import { AboutUsComponent } from './about-us/about-us.component';
     OfficeWasteComponent,
     BuildingWasteComponent,
     AboutUsComponent,
+    BasicPlanComponent,
+    PremiumPlanComponent,
+    UltimatePlanComponent,
+    UpdateUserComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +61,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     HttpClientModule,
     MatDialogModule,
     CommonModule,
-    MatFormFieldModule 
+    MatFormFieldModule,
+    NgxFileDropModule 
   ],
   providers: [[AdminGuard],],
   bootstrap: [AppComponent]

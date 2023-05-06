@@ -15,6 +15,12 @@ import { CommercialWasteComponent } from './Services/commercial-waste/commercial
 import { OurServicesComponent } from './Services/our-services/our-services.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { BasicPlanComponent } from './Plans/basic-plan/basic-plan.component';
+import { PremiumPlanComponent } from './Plans/premium-plan/premium-plan.component';
+import { UltimatePlanComponent } from './Plans/ultimate-plan/ultimate-plan.component';
+import { AuthGuard } from './auth.guard';
+import { ProfileComponent } from './profile/profile.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
 
 
 const routes: Routes = [
@@ -31,8 +37,12 @@ const routes: Routes = [
   {path: 'OurServices', component: OurServicesComponent},
   {path: 'About-us', component: AboutUsComponent},
   {path: 'Contact-us', component: ContactUsComponent},
-
-  { path: 'adminDashboard', component: AdminDashboardComponent, canActivate: [AdminGuard]}
+  {path: 'basicPlan', component: BasicPlanComponent, canActivate:  [AuthGuard]},
+  {path: 'premiumPlan', component: PremiumPlanComponent, canActivate:  [AuthGuard]},
+  {path: 'ultimatePlan', component: UltimatePlanComponent, canActivate:  [AuthGuard]},
+  { path: 'adminDashboard', component: AdminDashboardComponent, canActivate: [AdminGuard]},
+  { path: 'updateDriver/:id', component: UpdateUserComponent },
+  { path: 'profile', component: ProfileComponent}
 ];
 
 @NgModule({

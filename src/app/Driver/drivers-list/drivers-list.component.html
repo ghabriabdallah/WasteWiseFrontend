@@ -25,6 +25,7 @@
       <td [ngStyle]="{'color': user.onDuty ? 'green' : 'red'}">{{user.onDuty ? 'On Duty' : 'Off Duty'}}</td>
       <td>
         <button mat-raised-button class="primary" [disabled]="user.onDuty">Give Mission</button>
+        <button mat-raised-button class="warn" (click)="updateUser(user.id)">Update</button>
         <button mat-raised-button class="danger" (click)="deleteUser(user.id)">Remove</button>
       </td>
     </tr>

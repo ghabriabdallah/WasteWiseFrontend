@@ -9,34 +9,28 @@ import { Subscription } from '../../subscription';
   styleUrls: ['./premium-plan.component.css']
 })
 export class PremiumPlanComponent {
-  subscriptionForm!: FormGroup;
-  subscription!: Subscription;
-  visitDates: Date[] = [new Date(), new Date(), new Date(), new Date(), new Date(), new Date()];
+  subscription: Subscription = {
+    id: 0,
+    firstName: '',
+    lastName: '',
+    email: '',
+    address: '',
+    additionalAddress: '',
+    postalCode: 0,
+    city: '',
+    numTel: '',
+    planName: '',
+    price: 0,
+    paid: false,
+    visitDates: ['', '', '', '','','']
+  };
 
-  constructor(
-    private fb: FormBuilder,
-    private subscriptionService: SubscriptionService
-  ) { }
+  constructor(private subscriptionService: SubscriptionService) {}
 
-  ngOnInit(): void {
-    this.subscriptionForm = this.fb.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      address: ['', Validators.required],
-      additionalAddress: [''],
-      postalCode: ['', Validators.compose([Validators.required, Validators.pattern('^[0-9]*$')])],
-      city: ['', Validators.required],
-      numTel: ['', Validators.required]
-    });
-  }
-
-  onSubmit(): void {
-    const subscription = {
-      ...this.subscriptionForm.value,
-      visitDates: this.visitDates
-    };
-    this.subscriptionService.createSubscription(subscription)
-      .subscribe(res => console.log(res));
+  onSubmit() {
+    this.subscriptionService.createSubscription(this.subscription).subscribe(
+      subscription => console.log('Subscription created:', subscription),
+      error => console.error('Error creating subscription:', error)
+    );
   }
 }

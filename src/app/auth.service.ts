@@ -57,9 +57,19 @@ export class AuthService {
   } else {
     return null;
   }
+  
 }
   
-  
+getUsername(): string | null {
+  const token = localStorage.getItem('token');
+  if (token) {
+    const payload: any = jwt_decode(token);
+    return payload.sub;
+  } else {
+    return null;
+  }
+}
+
 
   
   

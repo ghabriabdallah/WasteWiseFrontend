@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Update Current User/Driver</h2>
+      <div *ngIf="successMessage" class="alert alert-success">{{successMessage}}</div>
+      <div *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</div>
+      <form #updateForm="ngForm" (ngSubmit)="updateUser(updateForm)">
+        <div class="form-group">
+          <label class="form-label" for="firstName">First Name:</label>
+          <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="user.firstName" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="lastName">Last Name:</label>
+          <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="user.lastName" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" required email>
+          <div *ngIf="updateForm.controls['email'].errors?.['required']" class="alert alert-danger">Email is required</div>
+          <div *ngIf="updateForm.controls['email'].errors?.['email']" class="alert alert-danger">Invalid email format</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="password">Password:</label>
+          <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" required minlength="6" pattern="^[a-zA-Z0-9]*$">
+          <div *ngIf="updateForm.controls['password'].errors?.['required']" class="alert alert-danger">Password is required</div>
+          <div *ngIf="updateForm.controls['password'].errors?.['minlength']" class="alert alert-danger">Password should be at least 6 characters</div>
+          <div *ngIf="updateForm.controls['password'].errors?.['invalidPassword']">Password should not contain special characters.</div>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="role">Role:</label>
+            <select class="form-control" id="role" name="role" [(ngModel)]="user.role">
+              <option value="DRIVER">Driver</option>
+              <option value="USER">User</option>
+              <option value="ADMIN">Admin</option>
+            </select>
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+  

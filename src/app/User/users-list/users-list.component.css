@@ -112,3 +112,15 @@
       transform: translateY(0);
     }
   }
+
+  button.warn {
+    background-color: #230999;
+    margin-top: 20px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+  }
+  button.warn:hover {
+    background-color: #3e5cc0;
+    transform: translateY(-3px);
+  }
+  

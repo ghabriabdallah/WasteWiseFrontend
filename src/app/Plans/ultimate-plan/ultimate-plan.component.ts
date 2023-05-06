@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { SubscriptionService } from '../../subscription.service';
-import { Subscription } from '../../subscription';
+import { Component, OnInit } from '@angular/core';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Subscription } from 'src/app/subscription';
+import { SubscriptionService } from 'src/app/subscription.service';
 
 @Component({
   selector: 'app-ultimate-plan',
@@ -9,34 +9,28 @@ import { Subscription } from '../../subscription';
   styleUrls: ['./ultimate-plan.component.css']
 })
 export class UltimatePlanComponent {
-  subscriptionForm!: FormGroup;
-  subscription!: Subscription;
-  visitDates: Date[] = [new Date(), new Date(), new Date(), new Date(), new Date(), new Date(), new Date(), new Date()];
+  subscription: Subscription = {
+    id: 0,
+    firstName: '',
+    lastName: '',
+    email: '',
+    address: '',
+    additionalAddress: '',
+    postalCode: 0,
+    city: '',
+    numTel: '',
+    planName: '',
+    price: 0,
+    paid: false,
+    visitDates: ['', '', '', '','','','','']
+  };
 
-  constructor(
-    private fb: FormBuilder,
-    private subscriptionService: SubscriptionService
-  ) { }
+  constructor(private subscriptionService: SubscriptionService) {}
 
-  ngOnInit(): void {
-    this.subscriptionForm = this.fb.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      address: ['', Validators.required],
-      additionalAddress: [''],
-      postalCode: ['', Validators.compose([Validators.required, Validators.pattern('^[0-9]*$')])],
-      city: ['', Validators.required],
-      numTel: ['', Validators.required]
-    });
-  }
-
-  onSubmit(): void {
-    const subscription = {
-      ...this.subscriptionForm.value,
-      visitDates: this.visitDates
-    };
-    this.subscriptionService.createSubscription(subscription)
-      .subscribe(res => console.log(res));
+  onSubmit() {
+    this.subscriptionService.createSubscription(this.subscription).subscribe(
+      subscription => console.log('Subscription created:', subscription),
+      error => console.error('Error creating subscription:', error)
+    );
   }
 }

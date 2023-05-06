@@ -20,6 +20,7 @@
       <td>{{user.numTel}}</td>
       <td>{{user.adress}}</td>
       <td>
+        <button mat-raised-button class="warn" (click)="updateUser(user.id)">Update</button>
         <button mat-raised-button class="danger" (click)="deleteUser(user.id)">Remove</button>
       </td>
     </tr>

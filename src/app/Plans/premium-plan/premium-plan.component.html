@@ -1,76 +1,91 @@
-<div class="container">
-    <div class="card mb-3">
-      <div class="card-header">
-        Personal Information
+<div class="plan-description">
+  <h2>Premium Plan</h2>
+  <p>Our Premium Plan offers a priority service level with an increased number of monthly pickups or visits. We accept a wide range of materials for recycling, including some that may not be accepted under our Basic Plan. Our extended hours of availability for customer service mean that you can always reach us when you need to. The Premium Plan also includes advanced reporting and tracking features to help you stay on top of your recycling efforts. In addition, we offer additional services such as document shredding and e-waste disposal to make sure that all of your needs are met. If you're looking for a comprehensive recycling solution that offers top-of-the-line features and services, the Premium Plan is the perfect choice for you.</p>
+  <img class="stars" src="assets\img\4stars.png">
+</div> 
+
+<h2 class="formIntro">Please Fill in the Form <span><img class="formImg" src="assets\img\form1.jpg"></span></h2>
+
+
+<div class="card-container">
+  <div class="card">
+    <h2>Personal Information</h2>
+    <form (submit)="onSubmit()">
+      <div>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" [(ngModel)]="subscription.firstName" required>
       </div>
-      <div class="card-body">
-        <form (ngSubmit)="onSubmit()" #subscriptionForm="ngForm">
-          <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="subscription.firstName" required>
-          </div>
-          <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="subscription.lastName" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="subscription.email" required>
-          </div>
-          <div class="form-group">
-            <label for="address">Address</label>
-            <input type="text" class="form-control" id="address" name="address" [(ngModel)]="subscription.address" required>
-          </div>
-          <div class="form-group">
-            <label for="additionalAddress">Additional Address</label>
-            <input type="text" class="form-control" id="additionalAddress" name="additionalAddress" [(ngModel)]="subscription.additionalAddress">
-          </div>
-          <div class="form-group">
-            <label for="postalCode">Postal Code</label>
-            <input type="number" class="form-control" id="postalCode" name="postalCode" [(ngModel)]="subscription.postalCode" required>
-          </div>
-          <div class="form-group">
-            <label for="city">City</label>
-            <input type="text" class="form-control" id="city" name="city" [(ngModel)]="subscription.city" required>
-          </div>
-          <div class="form-group">
-            <label for="numTel">Phone Number</label>
-            <input type="tel" class="form-control" id="numTel" name="numTel" [(ngModel)]="subscription.numTel" required>
-          </div>
-        </form>
+
+      <div>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" [(ngModel)]="subscription.lastName" required>
       </div>
-    </div>
-    <div class="card mb-3">
-      <div class="card-header">
-        Visit Dates
+
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="subscription.email" required>
       </div>
-      <div class="card-body">
-        <form (ngSubmit)="onSubmit()" #subscriptionForm="ngForm">
-          <div class="form-group">
-            <label for="visitDate1">Visit Date 1</label>
-            <input type="date" class="form-control" id="visitDate1" name="visitDate1" [(ngModel)]="visitDates[0]">
-          </div>
-          <div class="form-group">
-            <label for="visitDate2">Visit Date 2</label>
-            <input type="date" class="form-control" id="visitDate2" name="visitDate2" [(ngModel)]="visitDates[1]">
-          </div>
-          <div class="form-group">
-            <label for="visitDate3">Visit Date 3</label>
-            <input type="date" class="form-control" id="visitDate3" name="visitDate3" [(ngModel)]="visitDates[2]">
-          </div>
-          <div class="form-group">
-            <label for="visitDate4">Visit Date 4</label>
-            <input type="date" class="form-control" id="visitDate4" name="visitDate4" [(ngModel)]="visitDates[3]">
-          </div>
-          <div class="form-group">
-            <label for="visitDate5">Visit Date 5</label>
-            <input type="date" class="form-control" id="visitDate5" name="visitDate5" [(ngModel)]="visitDates[4]">
-          </div>
-          <div class="form-group">
-            <label for="visitDate6">Visit Date 6</label>
-            <input type="date" class="form-control" id="visitDate6" name="visitDate6" [(ngModel)]="visitDates[5]">
-          </div>
-          
-  <button type="submit" class="btn btn-primary" [disabled]="!subscriptionForm.valid">Submit</button>
-      </form>
-    </div>
+
+      <div>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" [(ngModel)]="subscription.address" required>
+      </div>
+
+      <div>
+        <label for="additionalAddress">Additional Address:</label>
+        <input type="text" id="additionalAddress" name="additionalAddress" [(ngModel)]="subscription.additionalAddress">
+      </div>
+
+      <div>
+        <label for="postalCode">Postal Code:</label>
+        <input type="number" id="postalCode" name="postalCode" [(ngModel)]="subscription.postalCode" required>
+      </div>
+
+      <div>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" [(ngModel)]="subscription.city" required>
+      </div>
+
+      <div>
+        <label for="numTel">Telephone Number:</label>
+        <input type="tel" id="numTel" name="numTel" [(ngModel)]="subscription.numTel" required>
+      </div>
+
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Pickup Dates</h2>
+    <form (submit)="onSubmit()">
+      <div>
+        <label for="visitDate1">Pickup Date 1:</label>
+        <input type="date" id="visitDate1" name="visitDate1" [(ngModel)]="subscription.visitDates[0]" required>
+      </div>
+
+      <div>
+        <label for="visitDate2">Pickup Date 2:</label>
+        <input type="date" id="visitDate2" name="visitDate2" [(ngModel)]="subscription.visitDates[1]" required>
+      </div>
+
+      <div>
+        <label for="visitDate3">Pickup Date 3:</label>
+        <input type="date" id="visitDate3" name="visitDate3" [(ngModel)]="subscription.visitDates[2]" required>
+      </div>
+
+      <div>
+        <label for="visitDate4">Pickup Date 4:</label>
+        <input type="date" id="visitDate4" name="visitDate4" [(ngModel)]="subscription.visitDates[3]" required>
+      </div>
+
+      <div>
+        <label for="visitDate4">Pickup Date 5:</label>
+        <input type="date" id="visitDate5" name="visitDate5" [(ngModel)]="subscription.visitDates[4]" required>
+      </div>
+      <div>
+        <label for="visitDate4">Pickup Date 6:</label>
+        <input type="date" id="visitDate6" name="visitDate6" [(ngModel)]="subscription.visitDates[5]" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>

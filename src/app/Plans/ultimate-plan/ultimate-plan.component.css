@@ -1,50 +1,150 @@
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: goldenrod;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    display: flex; /* Add a flexbox layout */
-    justify-content: center; /* Center the cards horizontally */
-  }
+
+
+.plan-description {
+  background-color: #f6cd1c;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.plan-description h2 {
+  padding-top: 30px;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 5px #7a5b04;
   
-  .card {
-    padding: 20px;
-    margin: 10px;
-    width: 100%;
-    background-color: #F8F2E6;
-    border-radius: 5px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-    text-align: center;
-  }
-  
-  .card h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #4E4E4E;
-  }
-  
-  .card p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #717171;
-  }
-  
-  .card button {
-    display: block;
-    margin: 20px auto 0;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #BFAE9F;
-    color: #FFF;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .card button:hover {
-    background-color: #9D8C7E;
-  }
-  
+}
+
+.plan-description p {
+  color: #583C2A;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 0 5px #F0E5CF;
+}
+
+.plan-description p strong {
+  font-weight: bold;
+}
+
+.plan-description p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 2px 2px 5px #ccc;
+  background-color: #f6cd1c;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.card input[type="text"],
+.card input[type="email"],
+.card input[type="tel"],
+.card input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.card input[type="text"]:focus,
+.card input[type="email"]:focus,
+.card input[type="tel"]:focus,
+.card input[type="date"]:focus {
+  outline: none;
+  border-color: #3f51b5;
+}
+
+.card button[type="submit"] {
+  background-color: #6e9b05;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card button[type="submit"]:hover {
+  background-color: #a3b40c;
+}
+
+.bar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.bar {
+  height: 5px;
+  background-color: #ccc;
+  width: 100%;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: #a0af13;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 0.3s ease;
+}
+
+.progress--personal {
+  width: 50%;
+}
+
+.progress--visit {
+  width: 100%;
+}
+
+.stars {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.formImg {
+  width: 100px;
+  height: 100px;
+}
+.formIntro {
+  text-align: center;
+  font-size: 35px;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 0 10px #916610;
+}

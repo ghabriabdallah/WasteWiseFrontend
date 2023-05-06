@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { ConfirmationDialogComponent } from '../../Admin/confirmation-dialog/confirmation-dialog.component';
 
 @Component({
@@ -12,7 +13,7 @@ export class UsersListComponent implements OnInit {
 
   users!: any[];
 
-  constructor(private http: HttpClient, public dialog: MatDialog) { }
+  constructor(private http: HttpClient, public dialog: MatDialog, private router: Router) { }
 
   ngOnInit() {
     this.http.get<any[]>('http://localhost:8080/WasteWise/Admin/AllUsers')
@@ -35,6 +36,9 @@ export class UsersListComponent implements OnInit {
           });
       }
     });
+  }
+  updateUser(id: number) {
+    this.router.navigate(['/updateDriver', id]);
   }
 
 }

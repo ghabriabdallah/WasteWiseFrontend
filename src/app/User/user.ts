@@ -1,5 +1,5 @@
 export class User {
-  id!: Int16Array;
+  id!: number;
     firstName!: string;
     lastName!: string;
     email!: string;
@@ -9,5 +9,6 @@ export class User {
     role!: string;
     uid!: Int16Array;
     onDuty!: boolean;
+    photo?: string;
   }
  
