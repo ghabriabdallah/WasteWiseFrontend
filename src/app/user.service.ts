@@ -8,7 +8,7 @@ import { User } from './User/user';
 })
 export class UserService {
 
-  private baseUrl = 'http://localhost:8080/WasteWise';
+  public baseUrl = 'http://localhost:8080/WasteWise';
 
   constructor(private http: HttpClient) { }
 
@@ -25,15 +25,19 @@ export class UserService {
   }
 
   updateUser(id: number, user: User): Observable<any> {
-    return this.http.put(`${this.baseUrl}/UpdateUser/${id}`, user, { responseType: 'text' });
-  }
+    return this.http.put(`${this.baseUrl}/Admin/UpdateUser/${id}`, user, { responseType: 'text' });
+  }  
 
   changeDuty(id: number): Observable<any> {
     return this.http.put(`${this.baseUrl}/Admin/ChangeDuty/${id}`, null, { responseType: 'text' });
   }
 
-  updatePhotoById(id: number, photo: string): Observable<any> {
-    return this.http.put(`${this.baseUrl}/Profile/UpdatePhoto/${id}`, { photo }, { responseType: 'text' });
+  updatePhoto(id: number, file: File): Observable<User> {
+    const formData = new FormData();
+    formData.append('file', file);
+    const url = `${this.baseUrl}/UpdatePhoto/${id}`;
+    return this.http.put<User>(url, formData);
   }
+  
 
 }

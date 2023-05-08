@@ -3,6 +3,7 @@ import { User } from '../User/user';
 import { AuthService } from '../auth.service';
 import { UserService } from '../user.service';
 import { NgxFileDropEntry, FileSystemFileEntry, FileSystemDirectoryEntry } from 'ngx-file-drop';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -11,18 +12,14 @@ import { NgxFileDropEntry, FileSystemFileEntry, FileSystemDirectoryEntry } from 
 })
 export class ProfileComponent implements OnInit {
   user: User = new User();
+  private baseUrl = 'http://localhost:8080/WasteWise';
   public files: NgxFileDropEntry[] = [];
 
-  constructor(private authService: AuthService, private userService: UserService) {}
-
-  onSubmit() {
-    this.userService.updateUser(this.user.id, this.user).subscribe(() => {
-      console.log('User updated successfully');
-    }, (error) => {
-      console.log('Error updating user:', error);
-    });
-  }
-
+  constructor(
+    private authService: AuthService,
+    private userService: UserService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     const email = this.authService.getUsername();
@@ -43,12 +40,13 @@ export class ProfileComponent implements OnInit {
         fileEntry.file((file: File) => {
           // Here you can access the real file
           console.log(droppedFile.relativePath, file);
-          const reader = new FileReader();
-          reader.readAsDataURL(file);
-          reader.onload = () => {
-            this.user.photo = reader.result as string;
-            this.updatePhoto();
-          };
+          this.updatePhoto(this.user.id, file).subscribe(
+            (user: User) => {
+              console.log('Photo updated successfully!');
+              this.user = user;
+            },
+            (error) => console.log(error)
+          );
         });
       } else {
         // It was a directory (empty directories are added, otherwise only files)
@@ -63,40 +61,28 @@ export class ProfileComponent implements OnInit {
       if (droppedFile.fileEntry.isFile) {
         const fileEntry = droppedFile.fileEntry as FileSystemFileEntry;
         fileEntry.file((file: File) => {
-          const reader = new FileReader();
-          reader.readAsDataURL(file);
-          reader.onload = () => {
-            this.user.photo = reader.result as string;
-            this.updatePhoto();
-          };
+          this.updatePhoto(this.user.id, file).subscribe(
+            (user: User) => {
+              console.log('Photo updated successfully!');
+              this.user = user;
+            },
+            (error) => console.log(error)
+          );
         });
       }
     }
   }
 
-  public fileOver(event: any) {
-    console.log(event);
-  }
-
-  public fileLeave(event: any) {
-    console.log(event);
-  }
-
- 
-
   onFileSelected(event: any) {
     const file: File = event.target.files[0];
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      const base64String = reader.result as string | undefined;
-      if (base64String) {
-        this.user.photo = base64String.split(',')[1]; // extract base64 data from string
-        this.updatePhoto();
-      }
-    };
+    this.updatePhoto(this.user.id, file).subscribe(
+      (user: User) => {
+        console.log('Photo updated successfully!');
+        this.user = user;
+      },
+      (error) => console.log(error)
+    );
   }
-  
 
   onClickFileInput() {
     const fileInput = document.getElementById('fileInput');
@@ -104,20 +90,31 @@ export class ProfileComponent implements OnInit {
       fileInput.click();
     }
   }
+
+  updatePhoto(id: number, file: File) {
+    return this.userService.updatePhoto(id, file);
+  }
   
-
-  updatePhoto() {
-    const photo = this.user.photo || '';
-    this.userService.updatePhotoById(this.user.id, photo).subscribe(
-      (response) => console.log(response),
-      (error) => console.log(error)
-    );
+  
+  
+  dataURLtoBlob(dataURL: string): Blob {
+    const [header, body] = dataURL.split(",");
+    const mimeMatch = header.match(/:(.*?);/);
+    if (!mimeMatch) {
+      throw new Error("Invalid data URL: missing MIME type");
+    }
+    const mime = mimeMatch[1];
+    const byteCharacters = atob(body);
+    const byteNumbers = new Array(byteCharacters.length);
+    for (let i = 0; i < byteCharacters.length; i++) {
+      byteNumbers[i] = byteCharacters.charCodeAt(i);
+    }
+    const byteArray = new Uint8Array(byteNumbers);
+    return new Blob([byteArray], { type: mime });
   }
-
-  updateUser() {
-    this.userService.updateUser(this.user.id, this.user).subscribe(
-      (response) => console.log(response),
-      (error) => console.log(error)
-    );
-  }
+  
+  
+  
 }
+
+

@@ -9,6 +9,6 @@ export class User {
     role!: string;
     uid!: Int16Array;
     onDuty!: boolean;
-    photo?: string;
+    photo?: Blob;
   }
  
