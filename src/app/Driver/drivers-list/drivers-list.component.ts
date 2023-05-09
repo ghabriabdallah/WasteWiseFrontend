@@ -39,7 +39,7 @@ export class DriversListComponent {
     });
   }
   updateUser(id: number) {
-    this.router.navigate(['/updateDriver', id]);
+    this.router.navigate(['/updateUser', id]);
   }
   
 }

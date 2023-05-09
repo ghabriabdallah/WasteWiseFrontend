@@ -1,8 +1,12 @@
+body{
+  background-image: url('src\assets\img\eco10.jpg');
+
+}
+
 .container {
-  max-width: 800px;
   margin: 0 auto;
+  border-radius: 10px;
   padding: 40px;
-  background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -15,6 +19,7 @@ img {
 h1 {
   font-size: 36px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .company-name {
@@ -38,6 +43,7 @@ ul {
 }
 
 li {
+  font-size: 20px;
   margin-bottom: 10px;
 }
 .card-container {
@@ -51,8 +57,8 @@ li {
   background-color: #fff;
   border-radius: 10%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  height: 240px;
+  width: 400px;
+  height: 300px;
 }
 
 .image {
@@ -96,4 +102,8 @@ li::before {
 
 .green-text {
   color: green;
+}
+p{
+  font-size: 20px;
+  font-weight: 600;
 }

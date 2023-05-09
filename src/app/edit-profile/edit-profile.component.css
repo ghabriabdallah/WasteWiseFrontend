@@ -1,0 +1,158 @@
+
+body {
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 700px;
+    margin-left: calc((95.2vw - 100%) / 2);
+    margin-right: calc((95.2vw - 100%) / 2);
+    background-image: url('src\assets\img\green.jpg');
+  }
+
+
+  
+/* Change the background color of the form */
+form {
+    padding: 20px;
+  }
+  
+  /* Style the card elements */
+  .card {
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the card title */
+  .card-title {
+    color: #0a570e;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 22px #188a92;
+
+  }
+  
+  /* Style the form labels */
+  .form-label {
+    color: #0a570e;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the form inputs */
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  /* Style the submit button */
+  .btn-primary {
+    background-color: #0a570e;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    margin-top: 20px;
+  }
+  
+  /* Style the success and error messages */
+  .alert-success {
+    background-color: #D4EDDA;
+    border-color: #C3E6CB;
+    color: #155724;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .alert-danger {
+    background-color: #F8D7DA;
+    border-color: #F5C6CB;
+    color: #721C24;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .waste {
+    font-style: oblique;
+    font-size: 60px;
+    color:	#8B4513;
+    font-weight: 600;
+    animation: fadeIn 0.5s ease-in-out forwards;
+  
+  
+  }
+  .wise {
+    font-style: oblique;
+    font-size: 60px;
+    color:	#0ba525;
+    font-weight: 600;
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+
+  .ww {
+    margin-top: 80px;
+    margin-left: 70px;
+  }
+/* .card {
+    width: 500px;
+    margin: 50px auto;
+    background-color: #F0FFF0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    color: #006400;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .form-label {
+    color: #006400;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .form-control {
+    border: 2px solid #8FBC8F;
+    color:black;
+  }
+  
+  .form-control:focus {
+    box-shadow: none;
+    border-color: #006400;
+  }
+  
+  .btn-primary {
+    background-color: #006400;
+    border-color: #006400;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #008000;
+    border-color: #008000;
+  }
+  button.return {
+    background-color: #0d0d0e;
+    margin-top: 20px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+  }
+  button.return:hover {
+    background-color: #323336;
+    transform: translateY(-3px);
+  }
+  */

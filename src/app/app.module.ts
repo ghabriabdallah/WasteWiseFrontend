@@ -28,6 +28,7 @@ import { PremiumPlanComponent } from './Plans/premium-plan/premium-plan.componen
 import { UltimatePlanComponent } from './Plans/ultimate-plan/ultimate-plan.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { ProfileComponent } from './profile/profile.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ProfileComponent } from './profile/profile.component';
     PremiumPlanComponent,
     UltimatePlanComponent,
     UpdateUserComponent,
-    ProfileComponent
+    ProfileComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +64,7 @@ import { ProfileComponent } from './profile/profile.component';
     MatDialogModule,
     CommonModule,
     MatFormFieldModule,
-    NgxFileDropModule 
+    NgxFileDropModule, 
   ],
   providers: [[AdminGuard],],
   bootstrap: [AppComponent]

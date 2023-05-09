@@ -3,7 +3,8 @@ import { User } from '../User/user';
 import { AuthService } from '../auth.service';
 import { UserService } from '../user.service';
 import { NgxFileDropEntry, FileSystemFileEntry, FileSystemDirectoryEntry } from 'ngx-file-drop';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-profile',
@@ -12,13 +13,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
   user: User = new User();
+  successMessage: string = '';
+  errorMessage: string = '';
   private baseUrl = 'http://localhost:8080/WasteWise';
   public files: NgxFileDropEntry[] = [];
 
   constructor(
     private authService: AuthService,
     private userService: UserService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private http: HttpClient,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -34,11 +39,9 @@ export class ProfileComponent implements OnInit {
   public dropped(files: NgxFileDropEntry[]) {
     this.files = files;
     for (const droppedFile of files) {
-      // Is it a file?
       if (droppedFile.fileEntry.isFile) {
         const fileEntry = droppedFile.fileEntry as FileSystemFileEntry;
         fileEntry.file((file: File) => {
-          // Here you can access the real file
           console.log(droppedFile.relativePath, file);
           this.updatePhoto(this.user.id, file).subscribe(
             (user: User) => {
@@ -49,7 +52,6 @@ export class ProfileComponent implements OnInit {
           );
         });
       } else {
-        // It was a directory (empty directories are added, otherwise only files)
         const fileEntry = droppedFile.fileEntry as FileSystemDirectoryEntry;
         console.log(droppedFile.relativePath, fileEntry);
       }
@@ -114,7 +116,9 @@ export class ProfileComponent implements OnInit {
   }
   
   
-  
+  updateUser(id: number) {
+    this.router.navigate(['/editProfile', id]);
+  }
 }
 
 

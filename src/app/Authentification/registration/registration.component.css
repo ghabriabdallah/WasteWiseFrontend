@@ -23,7 +23,7 @@ body {
   background-size: cover;
   background-position: center;
   width: 50%;
-  height: 900px; /* set the height to the desired value */
+  height: 800px;
   padding: 50px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -44,14 +44,13 @@ body {
   border-radius: 30px;
 }
 
-/* Style for the registration card */
 .registration-card {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 50px;
   width: 50%;
-  height: 900px;
+  height: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;

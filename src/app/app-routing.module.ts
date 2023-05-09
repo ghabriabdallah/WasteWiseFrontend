@@ -21,6 +21,7 @@ import { UltimatePlanComponent } from './Plans/ultimate-plan/ultimate-plan.compo
 import { AuthGuard } from './auth.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 const routes: Routes = [
@@ -41,8 +42,9 @@ const routes: Routes = [
   {path: 'premiumPlan', component: PremiumPlanComponent, canActivate:  [AuthGuard]},
   {path: 'ultimatePlan', component: UltimatePlanComponent, canActivate:  [AuthGuard]},
   { path: 'adminDashboard', component: AdminDashboardComponent, canActivate: [AdminGuard]},
-  { path: 'updateDriver/:id', component: UpdateUserComponent },
-  { path: 'profile', component: ProfileComponent}
+  { path: 'updateUser/:id', component: UpdateUserComponent },
+  { path: 'editProfile/:id', component: EditProfileComponent },
+  { path: 'profile', component: ProfileComponent, canActivate:  [AuthGuard]}
 ];
 
 @NgModule({
