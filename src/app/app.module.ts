@@ -29,6 +29,7 @@ import { UltimatePlanComponent } from './Plans/ultimate-plan/ultimate-plan.compo
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     UltimatePlanComponent,
     UpdateUserComponent,
     ProfileComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
