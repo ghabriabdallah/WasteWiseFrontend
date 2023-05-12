@@ -1,11 +1,13 @@
-/* Style for the welcome message and logo */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 2rem;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  display: flex; /* add this */
+  flex-direction: row; /* add this */
+}
+
   
   .logo {
     width: 100px;
@@ -19,9 +21,9 @@
     margin: 0;
   }
   
-  /* Style for the buttons */
   button {
-    display: block;
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
     margin-top: 2rem;
     padding: 1.5rem 3rem;
@@ -37,17 +39,17 @@
     z-index: 1;
   }
   
-  /* Style for the Manage Users button */
   button:nth-of-type(1) {
     background-color: #98ddca;
   }
   
-  /* Style for the Manage Drivers button */
   button:nth-of-type(2) {
     background-color: #b47e41;
   }
+  button:nth-of-type(3) {
+    background-color: #0d8112;
+  }
   
-  /* Hover style for the buttons */
   button:hover {
     transform: translateY(-0.5rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -61,5 +63,6 @@
     padding: 0;
     overflow-x: hidden;
     margin-left: calc((85vw - 100%) / 2);
-    margin-right: calc((85vw - 100%) / 2);
+    margin-right: calc((95.3vw - 100%) / 2);
+    overflow: hidden !important;
   }

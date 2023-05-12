@@ -32,6 +32,9 @@
         <li class="nav-item" *ngIf="authService.isLoggedIn()">
           <a class="nav-link text-light" routerLink="profile" style="color: #8B4513;">Profile</a>
         </li>
+        <li class="nav-item" *ngIf="isAdmin()">
+          <a class="nav-link text-light" routerLink="adminDashboard" style="color: #8B4513;">Dashboard</a>
+        </li>
         <li class="nav-item" *ngIf="authService.isLoggedIn()">
           <a class="nav-link text-light" (click)="onLogout()" style="color: #8B4513;">Logout</a>
         </li>

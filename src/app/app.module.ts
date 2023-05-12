@@ -30,6 +30,7 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FeedbacksListComponent } from './feedbacks-list/feedbacks-list.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     UpdateUserComponent,
     ProfileComponent,
     EditProfileComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    FeedbacksListComponent
   ],
   imports: [
     BrowserModule,

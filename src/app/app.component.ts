@@ -18,4 +18,8 @@ export class AppComponent {
   isLoggedIn(): boolean {
     return this.authService.isLoggedIn();
   }
+  isAdmin(): boolean {
+    const role = this.authService.getUserRole();
+    return role === 'ADMIN';
+  }
 }

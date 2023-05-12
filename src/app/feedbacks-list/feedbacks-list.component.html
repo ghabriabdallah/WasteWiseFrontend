@@ -1,0 +1,33 @@
+<body>
+
+    <div class="table-title">
+      <img src="assets\img\log.png" alt="Logo" class="logo"><span class="waste">Waste</span><span class="wise">Wise    -</span>
+      <span>   &nbsp; Reports List</span>
+    </div>
+      <table class="users-table">
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Address</th>
+          <th>Actions</th>
+        </tr>
+        <tr *ngFor="let feedback of feedbacks">
+          <td>{{feedback.id}}</td>
+          <td>{{feedback.firstName}}</td>
+          <td>{{feedback.lastName}}</td>
+          <td>{{feedback.email}}</td>
+          <td>{{feedback.numTel}}</td>
+          <td>{{feedback.message}}</td>
+          <td>
+            <button mat-raised-button class="danger" (click)="deleteFeedback(feedback.id)">Delete</button>
+        </td>
+        </tr>
+      </table>
+      <button  class="return" routerLink="/adminDashboard">Return</button>
+    
+    
+    </body>
+    

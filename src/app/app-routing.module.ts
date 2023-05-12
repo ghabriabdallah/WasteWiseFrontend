@@ -22,6 +22,7 @@ import { AuthGuard } from './auth.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { FeedbacksListComponent } from './feedbacks-list/feedbacks-list.component';
 
 
 const routes: Routes = [
@@ -44,7 +45,8 @@ const routes: Routes = [
   { path: 'adminDashboard', component: AdminDashboardComponent, canActivate: [AdminGuard]},
   { path: 'updateUser/:id', component: UpdateUserComponent },
   { path: 'editProfile/:id', component: EditProfileComponent },
-  { path: 'profile', component: ProfileComponent, canActivate:  [AuthGuard]}
+  { path: 'profile', component: ProfileComponent, canActivate:  [AuthGuard]},
+  { path: 'feedbacksList', component: FeedbacksListComponent, canActivate: [AdminGuard]}
 ];
 
 @NgModule({

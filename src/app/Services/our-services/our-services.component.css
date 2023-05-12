@@ -15,7 +15,6 @@ body {
     text-align: center;
     height: 600px;
     background-image: url("src\assets\img\tn11.jpg");
-    border-radius: 50px;
   }
   
   .title-banner img {
@@ -60,7 +59,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  background-color: #1dbd2a;
+  background-color: #1dbdb5;
 }
 
 .service-card img {
@@ -84,7 +83,7 @@ body {
 
 .service-card .see-more {
   display: inline-block;
-  background-color: #643000;
+  background-color: #094e1e;
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
