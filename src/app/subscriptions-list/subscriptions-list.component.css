@@ -1,0 +1,131 @@
+body{
+    margin-bottom: 20px;
+  }
+  
+  
+  .users-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .users-table th {
+      background-color: #006400;
+      color: #F0E5CF;
+      font-weight: bold;
+      text-align: left;
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+    
+    .users-table td {
+      text-align: left;
+      padding: 8px;
+      border: 1px solid #ddd;
+      font-weight: bold;
+    }
+    
+    .users-table tr:nth-child(even) {
+      background-color: #F0E5CF;
+    }
+    
+    
+    
+    button {
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      transition: all 0.2s ease-in-out;
+    }
+    
+    button.primary {
+      background-color: #006400;
+      color: #F0E5CF;
+      box-shadow: 0 5px 15px rgba(0, 100, 0, 0.4);
+    }
+    
+    button.primary:hover {
+      background-color: #009900;
+    }
+    
+    button.danger {
+      background-color: #cc2d11;
+      color: #fff;
+      box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+    }
+    
+    button.danger:hover {
+      background-color: #ff473d;
+      transform: translateY(-3px);
+    }
+    
+    .table-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #006400;
+      text-shadow: 0 0 5px #F0E5CF;
+      text-align: center;
+    }
+    
+    .logo {
+      width: 80px; 
+      height: 80px; 
+      margin-right: 10px;
+      padding: 20px;
+    }
+    button.return {
+      background-color: #0d0d0e;
+      margin-top: 20px;
+      color: #fff;
+      box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+    }
+    button.return:hover {
+      background-color: #323336;
+      transform: translateY(-3px);
+    }
+    .waste {
+      font-style: oblique;
+      font-size: 2.2rem;
+      color:	#8B4513;
+      font-weight: 600;
+      animation: fadeIn 0.8s ease-in-out forwards;
+    
+    }
+    .wise {
+      font-style: oblique;
+      font-size: 2.2rem;
+      color:	#0ba525;
+      font-weight: 600;
+      animation: fadeIn 0.8s ease-in-out forwards;
+    
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    button.warn {
+      background-color: #230999;
+      margin-top: 20px;
+      color: #fff;
+      box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+    }
+    button.warn:hover {
+      background-color: #3e5cc0;
+      transform: translateY(-3px);
+    }
+    

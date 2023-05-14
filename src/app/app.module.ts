@@ -31,6 +31,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FeedbacksListComponent } from './feedbacks-list/feedbacks-list.component';
+import { SubscriptionsListComponent } from './subscriptions-list/subscriptions-list.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MissionsListComponent } from './missions-list/missions-list.component';
 
 
 @NgModule({
@@ -57,7 +60,9 @@ import { FeedbacksListComponent } from './feedbacks-list/feedbacks-list.componen
     ProfileComponent,
     EditProfileComponent,
     ContactUsComponent,
-    FeedbacksListComponent
+    FeedbacksListComponent,
+    SubscriptionsListComponent,
+    MissionsListComponent
   ],
   imports: [
     BrowserModule,
@@ -69,6 +74,7 @@ import { FeedbacksListComponent } from './feedbacks-list/feedbacks-list.componen
     CommonModule,
     MatFormFieldModule,
     NgxFileDropModule, 
+    MatCheckboxModule
   ],
   providers: [[AdminGuard],],
   bootstrap: [AppComponent]

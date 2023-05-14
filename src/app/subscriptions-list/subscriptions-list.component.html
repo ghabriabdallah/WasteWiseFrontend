@@ -1,0 +1,38 @@
+<body>
+    <div class="table-title">
+      <img src="assets\img\log.png" alt="Logo" class="logo"><span class="waste">Waste</span><span class="wise">Wise    -</span>
+      <span>   &nbsp; Subscriptions List</span>
+    </div>
+    <table class="users-table">
+      <tr>
+        <th>Select</th>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Visit Dates</th>
+        <th>Actions</th>
+      </tr>
+      <tr *ngFor="let subscription of subscriptions">
+        <td>
+          <mat-checkbox (click)="$event.stopPropagation()" (change)="onSelect(subscription.id)" [checked]="subscription.id === selectedSubscriptionId"></mat-checkbox>
+        </td>
+        <td>{{subscription.id}}</td>
+        <td>{{subscription.firstName}}</td>
+        <td>{{subscription.lastName}}</td>
+        <td>{{subscription.email}}</td>
+        <td>{{subscription.numTel}}</td>
+        <td>{{subscription.address}}</td>
+        <td>
+          <div [innerHTML]="subscription.visitDates.join('<br>')"></div>
+        </td>
+        <td>
+          <button mat-raised-button class="warn" (click)="confirmMission()">Confirm Mission</button>
+        </td>
+      </tr>
+    </table>
+    <button class="return" routerLink="/adminDashboard">Return</button>
+  </body>
+  

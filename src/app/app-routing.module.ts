@@ -23,6 +23,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { FeedbacksListComponent } from './feedbacks-list/feedbacks-list.component';
+import { SubscriptionsListComponent } from './subscriptions-list/subscriptions-list.component';
+import { MissionsListComponent } from './missions-list/missions-list.component';
 
 
 const routes: Routes = [
@@ -46,7 +48,9 @@ const routes: Routes = [
   { path: 'updateUser/:id', component: UpdateUserComponent },
   { path: 'editProfile/:id', component: EditProfileComponent },
   { path: 'profile', component: ProfileComponent, canActivate:  [AuthGuard]},
-  { path: 'feedbacksList', component: FeedbacksListComponent, canActivate: [AdminGuard]}
+  { path: 'feedbacksList', component: FeedbacksListComponent, canActivate: [AdminGuard]},
+  { path: 'subscriptionsList/:id', component: SubscriptionsListComponent},
+  { path: 'missions', component: MissionsListComponent}
 ];
 
 @NgModule({
