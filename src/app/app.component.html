@@ -33,6 +33,12 @@
           <a class="nav-link text-light" routerLink="profile" style="color: #8B4513;">Profile</a>
         </li>
         <li class="nav-item" *ngIf="isAdmin()">
+          <a class="nav-link text-light" routerLink="driversList" style="color: #8B4513;">Create New Mission</a>
+        </li>
+        <li class="nav-item" *ngIf="isAdmin()">
+          <a class="nav-link text-light" routerLink="missions" style="color: #8B4513;">Missions List</a>
+        </li>
+        <li class="nav-item" *ngIf="isAdmin()">
           <a class="nav-link text-light" routerLink="adminDashboard" style="color: #8B4513;">Dashboard</a>
         </li>
         <li class="nav-item" *ngIf="authService.isLoggedIn()">

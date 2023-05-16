@@ -12,4 +12,5 @@ export class Subscription {
   price!: number;
   paid!: boolean;
   visitDates!: String[];
+  clearanceType!: string;
 }

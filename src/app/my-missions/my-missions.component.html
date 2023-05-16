@@ -1,0 +1,48 @@
+<body>
+  <h1>Welcome Driver {{ driverId }}</h1>
+
+    <div class="table-title">
+      <img src="assets\img\log.png" alt="Logo" class="logo"><span class="waste">Waste</span><span class="wise">Wise    -</span>
+      <span>   &nbsp; My Missions List</span>
+    </div>
+      <table class="users-table">
+        <tr>
+          <th>Mission ID</th>
+          <th>Subscription's Id</th>
+          <th>Clearance Type</th>
+          <th>Client's Name</th>
+          <th>Client's Phone Number</th>
+          <th>Pickup Address</th>
+          <th>Additional Address</th>
+          <th>Pickup Dates</th>
+          <th>Actions</th>
+        </tr>
+        <tr *ngFor="let mission of missions">
+            <td>{{ mission.id }}</td>
+            <td>{{ mission.subscription.id }}</td>
+            <td>{{ mission.subscription.clearanceType }}</td>
+            <td>{{ mission.subscription.firstName }} {{ mission.subscription.lastName }}</td>
+            <td>{{ mission.numTel }}</td>
+            <td>{{ mission.pickupAddress }}</td>
+            <td>{{ mission.additionalAddress }}</td>
+            <td>
+              <div [innerHTML]="mission.visitDates.join('<br>')"></div>
+          </td>
+            <td>
+              <div>
+              <button mat-raised-button class="primary" (click)="startMission(mission.id)">Start Mission</button>
+              <div>
+            </div>
+              <button mat-raised-button class="warn" (click)="missionOnHold(mission.id)">Mission OnHold</button>
+              <div>
+            </div>
+              <button mat-raised-button class="success" (click)="missionAccomplished(mission.id)">Mission Accomplished</button>
+            </div>    
+          </td>
+        </tr>
+      </table>
+      <button  class="return" routerLink="/driverDashboard">Return</button>
+    
+    
+    </body>
+    

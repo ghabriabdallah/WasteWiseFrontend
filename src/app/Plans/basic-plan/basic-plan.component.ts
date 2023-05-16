@@ -18,7 +18,8 @@ export class BasicPlanComponent {
     postalCode: 0,
     city: '',
     numTel: '',
-    planName: '',
+    planName: 'Bronze',
+    clearanceType: '',
     price: 0,
     paid: false,
     visitDates: ['', '', '', '']

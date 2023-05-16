@@ -56,8 +56,7 @@ export class AuthService {
     return payload.role;
   } else {
     return null;
-  }
-  
+  } 
 }
   
 getUsername(): string | null {

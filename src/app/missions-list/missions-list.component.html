@@ -1,1 +1,52 @@
-<p>missions-list works!</p>
+<body>
+
+    <div class="table-title">
+      <img src="assets\img\log.png" alt="Logo" class="logo"><span class="waste">Waste</span><span class="wise">Wise    -</span>
+      <span>   &nbsp; Missions List</span>
+    </div>
+      <table class="users-table">
+        <tr>
+          <th>ID</th>
+          <th>Driver's Id</th>
+          <th>Subscription's Id</th>
+          <th>Mission Status</th>
+          <th>Plan Name</th>
+          <th>Clearance Type</th>
+          <th>Pickup Address</th>
+          <th>Client's Phone Number</th>
+          <th>Pickup Dates</th>
+          <th>Actions</th>
+        </tr>
+        <tr *ngFor="let mission of missions">
+            <td>{{ mission.id }}</td>
+            <td>{{ mission.driver.id }}</td>
+            <td>{{ mission.subscription.id }}</td>
+            <td [ngStyle]="{
+              'color': mission.missionStatus === 'NEW' ? 'grey' :
+                       mission.missionStatus === 'Started' ? 'blue' :
+                       mission.missionStatus === 'OnHold' ? 'yellow' :
+                       mission.missionStatus === 'Finished' ? 'green' : ''
+            }">
+              {{ mission.missionStatus === 'NEW' ? 'NEW' :
+                 mission.missionStatus === 'Started' ? 'Started' :
+                 mission.missionStatus === 'OnHold' ? 'On Hold' :
+                 mission.missionStatus === 'Finished' ? 'Finished' : ''
+              }}
+            </td>
+                        <td>{{ mission.subscription.planName }}</td>
+            <td>{{ mission.subscription.clearanceType }}</td>
+            <td>{{ mission.pickupAddress }}</td>
+            <td>{{ mission.numTel }}</td>
+            <td>
+                <div [innerHTML]="mission.visitDates.join('<br>')"></div>
+              </td>
+            <td>
+            <button mat-raised-button class="danger" (click)="deleteMission(mission.id)">Delete</button>
+        </td>
+        </tr>
+      </table>
+      <button  class="return" routerLink="/adminDashboard">Return</button>
+    
+    
+    </body>
+    

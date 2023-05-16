@@ -45,6 +45,7 @@ body{
     button.primary {
       background-color: #006400;
       color: #F0E5CF;
+      width: 180px;
       box-shadow: 0 5px 15px rgba(0, 100, 0, 0.4);
     }
     
@@ -128,4 +129,23 @@ body{
       background-color: #3e5cc0;
       transform: translateY(-3px);
     }
+
+    button.success {
+      background-color: #159909;
+      margin-top: 20px;
+      width: 180px;
+      color: #fff;
+      box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+    }
+    button.success:hover {
+      background-color: #3ec03e;
+      transform: translateY(-3px);
+    }
     
+    h1 {
+      margin-top: 10px;
+      text-align: center;
+      color: #006400;
+      font-family: Times, "Times New Roman", Georgia, serif;
+
+    }

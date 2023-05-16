@@ -25,7 +25,9 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { FeedbacksListComponent } from './feedbacks-list/feedbacks-list.component';
 import { SubscriptionsListComponent } from './subscriptions-list/subscriptions-list.component';
 import { MissionsListComponent } from './missions-list/missions-list.component';
-
+import { DriverDashboardComponent } from './driver-dashboard/driver-dashboard.component';
+import { DriverGuard } from './driver.guard';
+import { MyMissionsComponent } from './my-missions/my-missions.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -45,12 +47,14 @@ const routes: Routes = [
   {path: 'premiumPlan', component: PremiumPlanComponent, canActivate:  [AuthGuard]},
   {path: 'ultimatePlan', component: UltimatePlanComponent, canActivate:  [AuthGuard]},
   { path: 'adminDashboard', component: AdminDashboardComponent, canActivate: [AdminGuard]},
-  { path: 'updateUser/:id', component: UpdateUserComponent },
+  { path: 'updateUser/:id', component: UpdateUserComponent, canActivate: [AdminGuard]},
   { path: 'editProfile/:id', component: EditProfileComponent },
   { path: 'profile', component: ProfileComponent, canActivate:  [AuthGuard]},
   { path: 'feedbacksList', component: FeedbacksListComponent, canActivate: [AdminGuard]},
-  { path: 'subscriptionsList/:id', component: SubscriptionsListComponent},
-  { path: 'missions', component: MissionsListComponent}
+  { path: 'subscriptionsList/:id', component: SubscriptionsListComponent, canActivate: [AdminGuard]},
+  { path: 'missions', component: MissionsListComponent},
+  { path: 'driverDashboard', component: DriverDashboardComponent, canActivate: [DriverGuard]},
+  { path: 'myMissions/:driverId', component: MyMissionsComponent },
 ];
 
 @NgModule({

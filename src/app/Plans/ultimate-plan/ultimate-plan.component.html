@@ -29,13 +29,8 @@
       </div>
 
       <div>
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" [(ngModel)]="subscription.address" required>
-      </div>
-
-      <div>
-        <label for="additionalAddress">Additional Address:</label>
-        <input type="text" id="additionalAddress" name="additionalAddress" [(ngModel)]="subscription.additionalAddress">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" [(ngModel)]="subscription.city" required>
       </div>
 
       <div>
@@ -44,8 +39,13 @@
       </div>
 
       <div>
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city" [(ngModel)]="subscription.city" required>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" [(ngModel)]="subscription.address" required>
+      </div>
+
+      <div>
+        <label for="additionalAddress">Additional Address:</label>
+        <input type="text" id="additionalAddress" name="additionalAddress" [(ngModel)]="subscription.additionalAddress" required>
       </div>
 
       <div>
@@ -53,6 +53,16 @@
         <input type="tel" id="numTel" name="numTel" [(ngModel)]="subscription.numTel" required>
       </div>
 
+      <div>
+        <label class="form-label" for="role">Clearance Type</label>
+        <select class="form-control" id="cType" name="cType" [(ngModel)]="subscription.clearanceType" required>
+          <option value="House-Clearance">House Clearance</option>
+          <option value="Commercial-Clearance">Commercial Clearance</option>
+          <option value="Office-Clearance">Office Clearance</option>
+          <option value="Building-Clearance">Building Clearance</option>
+        </select>
+      </div>
+      
     </form>
   </div>
 

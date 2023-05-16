@@ -59,7 +59,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  background-color: #1dbdb5;
+  background-color: #e2ebea;
 }
 
 .service-card img {

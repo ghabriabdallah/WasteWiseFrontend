@@ -1,12 +1,13 @@
 export class Mission {
     id!: number;
-    pickupDate!: Date;
-    pickupAddress!: string;
+    visitDates!: string[];
+        pickupAddress!: string;
     additionalAddress!: string;
     postalCode!: number;
     city!: string;
     numTel!: string;
     subscriptionId!: number;
     driverId!: number;
+    missionStatus!: string;
   }
   

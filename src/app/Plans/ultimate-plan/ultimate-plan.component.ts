@@ -19,7 +19,8 @@ export class UltimatePlanComponent {
     postalCode: 0,
     city: '',
     numTel: '',
-    planName: '',
+    planName: 'Gold',
+    clearanceType: '',
     price: 0,
     paid: false,
     visitDates: ['', '', '', '','','','','']

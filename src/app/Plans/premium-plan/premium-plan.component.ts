@@ -19,7 +19,8 @@ export class PremiumPlanComponent {
     postalCode: 0,
     city: '',
     numTel: '',
-    planName: '',
+    planName: 'Silver',
+    clearanceType: '',
     price: 0,
     paid: false,
     visitDates: ['', '', '', '','','']

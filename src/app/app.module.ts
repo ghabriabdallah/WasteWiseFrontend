@@ -12,6 +12,7 @@ import { AdminGuard } from './admin.guard';
 import { AddComponent } from './Driver/add/add.component';
 import { UsersListComponent } from './User/users-list/users-list.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 import { ConfirmationDialogComponent } from './Admin/confirmation-dialog/confirmation-dialog.component';
 import { AdminDashboardComponent } from './Admin/admin-dashboard/admin-dashboard.component';
 import { DriversListComponent } from './Driver/drivers-list/drivers-list.component'; 
@@ -34,6 +35,10 @@ import { FeedbacksListComponent } from './feedbacks-list/feedbacks-list.componen
 import { SubscriptionsListComponent } from './subscriptions-list/subscriptions-list.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MissionsListComponent } from './missions-list/missions-list.component';
+import { CreateMissionConfirmationDialogComponent } from './create-mission-confirmation-dialog/create-mission-confirmation-dialog.component';
+import { DriverDashboardComponent } from './driver-dashboard/driver-dashboard.component';
+import { DriverGuard } from './driver.guard';
+import { MyMissionsComponent } from './my-missions/my-missions.component';
 
 
 @NgModule({
@@ -62,7 +67,10 @@ import { MissionsListComponent } from './missions-list/missions-list.component';
     ContactUsComponent,
     FeedbacksListComponent,
     SubscriptionsListComponent,
-    MissionsListComponent
+    MissionsListComponent,
+    CreateMissionConfirmationDialogComponent,
+    DriverDashboardComponent,
+    MyMissionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,9 +82,10 @@ import { MissionsListComponent } from './missions-list/missions-list.component';
     CommonModule,
     MatFormFieldModule,
     NgxFileDropModule, 
-    MatCheckboxModule
+    MatCheckboxModule,
+  //  MatButtonModule
   ],
-  providers: [[AdminGuard],],
+  providers: [[AdminGuard], [DriverGuard]],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
