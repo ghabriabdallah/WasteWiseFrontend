@@ -7,19 +7,15 @@ body {
     overflow-x: hidden;
     margin-left: calc((95.2vw - 100%) / 2);
     margin-right: calc((95.2vw - 100%) / 2);
-    background-image: url("src\assets\img\dsrt.jpg")
+    background-image: url("src\assets\img\eco14.jpg")
   }
 
 
-  .title-banner {
-    text-align: center;
-    height: 600px;
-    background-image: url("src\assets\img\tn11.jpg");
-  }
+
   
   .title-banner img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 400px;
   }
 
   .s1 {

@@ -17,10 +17,10 @@
         <li class="nav-item">
           <a class="nav-link text-light" routerLink="/OurServices" style="color: #8B4513;">Services</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="!isAdmin()">
           <a class="nav-link text-light" routerLink="/About-us">About Us</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="!isAdmin()">
           <a class="nav-link text-light" routerLink="/Contact-us" style="color: #8B4513;">Contact Us</a>
         </li>
         <li class="nav-item" *ngIf="!authService.isLoggedIn()">

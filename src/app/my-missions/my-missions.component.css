@@ -1,11 +1,26 @@
 body{
     margin-bottom: 20px;
+    background-image: url('src\assets\img\eco10.jpg');
+    margin: 0;
+    padding: 0;
+    margin-left: calc((96vw - 100%) / 2);
+    margin-right: calc((95.3vw - 100%) / 2);
+    overflow: hidden !important;
+    margin-bottom: 20px;
+  }
+  .background-img{
+   width: 500px;
+   height: 300px;
+   align-items: center;
+   justify-content: center;
+   margin-left: 100px;
   }
   
   
   .users-table {
       width: 100%;
       border-collapse: collapse;
+      
     }
     
     .users-table th {
@@ -22,10 +37,12 @@ body{
       padding: 8px;
       border: 1px solid #ddd;
       font-weight: bold;
+      background-color: #e6e482;
+      
     }
     
     .users-table tr:nth-child(even) {
-      background-color: #F0E5CF;
+      background-color: #e6e482;
     }
     
     
@@ -43,14 +60,14 @@ body{
     }
     
     button.primary {
-      background-color: #006400;
+      background-color: #643900;
       color: #F0E5CF;
       width: 180px;
       box-shadow: 0 5px 15px rgba(0, 100, 0, 0.4);
     }
     
     button.primary:hover {
-      background-color: #009900;
+      background-color: #2c2601;
     }
     
     button.danger {
@@ -120,13 +137,13 @@ body{
     }
   
     button.warn {
-      background-color: #230999;
+      background-color: yellow;
       margin-top: 20px;
       color: #fff;
       box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
     }
     button.warn:hover {
-      background-color: #3e5cc0;
+      background-color: yellow;
       transform: translateY(-3px);
     }
 

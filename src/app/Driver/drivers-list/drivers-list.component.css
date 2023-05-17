@@ -1,5 +1,21 @@
 
 
+body{
+  margin-bottom: 20px;
+  background-image: url('src\assets\img\eco10.jpg');
+  margin: 0;
+  padding: 0;
+  margin-left: calc((96vw - 100%) / 2);
+  margin-right: calc((95.3vw - 100%) / 2);
+  overflow: hidden !important;
+}
+.background-img{
+ width: 500px;
+ height: 300px;
+ align-items: center;
+ justify-content: center;
+ margin-left: 100px;
+}
 
 .users-table {
     width: 100%;
@@ -20,6 +36,7 @@
     padding: 8px;
     border: 1px solid #ddd;
     font-weight: bold;
+    background-color: #e6e482;
   }
   
   .users-table tr:nth-child(even) {
@@ -98,6 +115,7 @@
     margin-top: 20px;
     color: #fff;
     box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+    margin-bottom: 10px;
   }
   button.return:hover {
     background-color: #323336;
