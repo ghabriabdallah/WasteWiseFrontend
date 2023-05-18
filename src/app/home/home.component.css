@@ -412,3 +412,10 @@ footer {
   height: 400px;
   object-fit: cover;
 }
+.officeImg {
+  margin-top: 53px;
+  height: 300px;
+}
+.houseImg {
+  margin-top: 10px;
+}
