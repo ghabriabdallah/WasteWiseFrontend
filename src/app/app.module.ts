@@ -39,6 +39,7 @@ import { CreateMissionConfirmationDialogComponent } from './create-mission-confi
 import { DriverDashboardComponent } from './driver-dashboard/driver-dashboard.component';
 import { DriverGuard } from './driver.guard';
 import { MyMissionsComponent } from './my-missions/my-missions.component';
+import { SubscriptionConfirmationComponent } from './subscription-confirmation/subscription-confirmation.component';
 
 
 @NgModule({
@@ -71,6 +72,7 @@ import { MyMissionsComponent } from './my-missions/my-missions.component';
     CreateMissionConfirmationDialogComponent,
     DriverDashboardComponent,
     MyMissionsComponent,
+    SubscriptionConfirmationComponent,
   ],
   imports: [
     BrowserModule,

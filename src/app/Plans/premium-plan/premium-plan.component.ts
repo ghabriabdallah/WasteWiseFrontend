@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SubscriptionService } from '../../subscription.service';
 import { Subscription } from '../../subscription';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-premium-plan',
@@ -26,11 +27,14 @@ export class PremiumPlanComponent {
     visitDates: ['', '', '', '','','']
   };
 
-  constructor(private subscriptionService: SubscriptionService) {}
+  constructor(private subscriptionService: SubscriptionService, private router: Router) {}
 
   onSubmit() {
     this.subscriptionService.createSubscription(this.subscription).subscribe(
-      subscription => console.log('Subscription created:', subscription),
+      subscription => {
+        console.log('Subscription created:', subscription);
+        this.router.navigate(['/subscription-confirmation']);
+      },
       error => console.error('Error creating subscription:', error)
     );
   }

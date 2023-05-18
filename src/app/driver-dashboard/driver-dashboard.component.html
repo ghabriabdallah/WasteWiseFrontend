@@ -1,22 +1,52 @@
 <body>
-    <div class="container">
-        <div class="row">
-          <div class="col-md-6">
+  <div class="header">
+    <img class="logo" src="assets\img\log.png" alt="Your logo">
+    <h1>Welcome to Driver Dashboard</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="Tcard">
+          <div class="card-body">
             <h2>Today's Missions</h2>
-            <button [routerLink]="['/myMissions', driverId]">My Missions</button>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Mission ID</th>
+                  <th>Clearance Type</th>
+                  <th>Client's Name</th>
+                  <th>Client's Phone Number</th>
+                  <th>Pickup Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let mission of missions">
+                  <td>{{ mission.id }}</td>
+                  <td>{{ mission.subscription.clearanceType }}</td>
+                  <td>{{ mission.subscription.firstName }} {{ mission.subscription.lastName }}</td>
+                  <td>{{ mission.numTel }}</td>
+                  <td>{{ mission.pickupAddress }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <button [routerLink]="['/myMissions', driverId]" class="action-button">My Missions</button>
           </div>
-          <div class="col-md-6">
-            <h2>Actions</h2>
-            <div>
-              <button class="action-button">Button 1</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h2>Duty Status:</h2>
+            <div class="toggle-switch">
+              <input type="checkbox" id="dutyToggle" [checked]="user.onDuty" (change)="toggleDuty()">
+              <label for="dutyToggle" class="toggle-label"></label>
             </div>
-            <div>
-              <button class="action-button">Button 2</button>
-            </div>
-            <div>
-              <button class="action-button">Button 3</button>
-            </div>
+            <p>{{ user.onDuty ? 'Driver is on duty' : 'Driver is off duty' }}</p>
           </div>
         </div>
       </div>
       
+      
+    </div>
+  </div>
+</body>

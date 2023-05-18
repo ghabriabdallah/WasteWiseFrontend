@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Subscription } from 'src/app/subscription';
 import { SubscriptionService } from 'src/app/subscription.service';
 
@@ -26,11 +27,14 @@ export class UltimatePlanComponent {
     visitDates: ['', '', '', '','','','','']
   };
 
-  constructor(private subscriptionService: SubscriptionService) {}
+  constructor(private subscriptionService: SubscriptionService, private router: Router) {}
 
   onSubmit() {
     this.subscriptionService.createSubscription(this.subscription).subscribe(
-      subscription => console.log('Subscription created:', subscription),
+      subscription => {
+        console.log('Subscription created:', subscription);
+        this.router.navigate(['/subscription-confirmation']);
+      },
       error => console.error('Error creating subscription:', error)
     );
   }

@@ -28,6 +28,7 @@ import { MissionsListComponent } from './missions-list/missions-list.component';
 import { DriverDashboardComponent } from './driver-dashboard/driver-dashboard.component';
 import { DriverGuard } from './driver.guard';
 import { MyMissionsComponent } from './my-missions/my-missions.component';
+import { SubscriptionConfirmationComponent } from './subscription-confirmation/subscription-confirmation.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -55,6 +56,7 @@ const routes: Routes = [
   { path: 'missions', component: MissionsListComponent},
   { path: 'driverDashboard', component: DriverDashboardComponent, canActivate: [DriverGuard]},
   { path: 'myMissions/:driverId', component: MyMissionsComponent },
+  { path: 'subscription-confirmation', component: SubscriptionConfirmationComponent}
 ];
 
 @NgModule({
