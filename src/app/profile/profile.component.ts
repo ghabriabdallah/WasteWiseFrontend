@@ -99,21 +99,7 @@ export class ProfileComponent implements OnInit {
   
   
   
-  dataURLtoBlob(dataURL: string): Blob {
-    const [header, body] = dataURL.split(",");
-    const mimeMatch = header.match(/:(.*?);/);
-    if (!mimeMatch) {
-      throw new Error("Invalid data URL: missing MIME type");
-    }
-    const mime = mimeMatch[1];
-    const byteCharacters = atob(body);
-    const byteNumbers = new Array(byteCharacters.length);
-    for (let i = 0; i < byteCharacters.length; i++) {
-      byteNumbers[i] = byteCharacters.charCodeAt(i);
-    }
-    const byteArray = new Uint8Array(byteNumbers);
-    return new Blob([byteArray], { type: mime });
-  }
+
   
   
   updateUser(id: number) {

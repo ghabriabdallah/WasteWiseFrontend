@@ -42,7 +42,7 @@ export class MyMissionsComponent implements OnInit {
     const missionStatus = 'Started';
     this.http.patch(url, { missionStatus }).subscribe(
       () => {
-        console.log('Mission status updated successfully.');
+        alert('Mission has started.');
         this.router.navigate(['/driverDashboard']);
       },
       (error) => {
@@ -56,7 +56,7 @@ export class MyMissionsComponent implements OnInit {
     const missionStatus = 'OnHold';
     this.http.patch(url, { missionStatus }).subscribe(
       () => {
-        console.log('Mission status updated successfully.');
+        alert('Mission is now on Hold.');
         this.router.navigate(['/driverDashboard']);
       },
       (error) => {
@@ -70,7 +70,7 @@ export class MyMissionsComponent implements OnInit {
     const missionStatus = 'Finished';
     this.http.patch(url, { missionStatus }).subscribe(
       () => {
-        console.log('Mission status updated successfully.');
+        alert('Mission finished.');
         this.router.navigate(['/driverDashboard']);
       },
       (error) => {

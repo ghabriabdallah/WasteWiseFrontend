@@ -22,4 +22,5 @@ export class AppComponent {
     const role = this.authService.getUserRole();
     return role === 'ADMIN';
   }
+  
 }

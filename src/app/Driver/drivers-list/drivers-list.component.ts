@@ -27,7 +27,7 @@ export class DriversListComponent {
   deleteUser(id: number) {
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
       width: '350px',
-      data: 'Are you sure you want to delete this user?'
+      data: 'Are you sure you want to delete this driver?'
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
