@@ -4,6 +4,11 @@
   <img src="assets\img\log.png" alt="Logo" class="logo"><span class="waste">Waste</span><span class="wise">Wise    -</span>
   <span>   &nbsp; Users List</span>
 </div>
+<div class="search-container">
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search by name or id" />
+  <button class="submit-button" (click)="searchDrivers()">Submit</button>
+  <button class="reset-button" (click)="resetSearch()">Reset</button>
+</div>
   <table class="users-table">
     <tr>
       <th>ID</th>

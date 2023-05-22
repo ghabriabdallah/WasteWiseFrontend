@@ -1,6 +1,21 @@
+
 body{
-    margin-bottom: 20px;
-  }
+  margin-bottom: 20px;
+  background-image: url('src\assets\img\eco10.jpg');
+  margin: 0;
+  padding: 0;
+  margin-left: calc((96vw - 100%) / 2);
+  margin-right: calc((95.3vw - 100%) / 2);
+  overflow: hidden !important;
+}
+
+.background-img{
+  width: 500px;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+ }
   
   
   .users-table {
@@ -22,6 +37,8 @@ body{
       padding: 8px;
       border: 1px solid #ddd;
       font-weight: bold;
+      background-color: #F0E5CF;
+
     }
     
     .users-table tr:nth-child(even) {
@@ -86,6 +103,7 @@ body{
       margin-top: 20px;
       color: #fff;
       box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+      margin-bottom: 20px;
     }
     button.return:hover {
       background-color: #323336;
@@ -128,4 +146,34 @@ body{
       background-color: #3e5cc0;
       transform: translateY(-3px);
     }
-    
+    .submit-button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+    .reset-button {
+      background-color: #7d8627; 
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  
+    .search-container{
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 20px;
+    }

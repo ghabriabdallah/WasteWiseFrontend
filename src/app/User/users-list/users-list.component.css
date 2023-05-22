@@ -1,11 +1,18 @@
 body{
   margin-bottom: 20px;
+  background-image: url('src\assets\img\eco10.jpg');
+  margin: 0;
+  padding: 0;
+  margin-left: calc((96vw - 100%) / 2);
+  margin-right: calc((95.3vw - 100%) / 2);
+  overflow: hidden !important;
 }
 
 
 .users-table {
-    width: 100%;
+    width: 99.8%;
     border-collapse: collapse;
+    margin-top: 20px;
   }
   
   .users-table th {
@@ -22,10 +29,11 @@ body{
     padding: 8px;
     border: 1px solid #ddd;
     font-weight: bold;
+    background-color: #e6e482;
   }
   
   .users-table tr:nth-child(even) {
-    background-color: #F0E5CF;
+    background-color: #e6e482;
   }
   
   
@@ -73,6 +81,7 @@ body{
     color: #006400;
     text-shadow: 0 0 5px #F0E5CF;
     text-align: center;
+    margin-top: 80px;
   }
   
   .logo {
@@ -86,6 +95,8 @@ body{
     margin-top: 20px;
     color: #fff;
     box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+    margin-bottom: 10px;
+
   }
   button.return:hover {
     background-color: #323336;
@@ -128,4 +139,34 @@ body{
     background-color: #3e5cc0;
     transform: translateY(-3px);
   }
-  
+  .submit-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  .reset-button {
+    background-color: #7d8627; 
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+
+  .search-container{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+  }

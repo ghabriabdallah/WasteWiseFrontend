@@ -13,14 +13,13 @@ import { ConfirmationDialogComponent } from '../../Admin/confirmation-dialog/con
 
 export class DriversListComponent {
   users!: any[];
+  searchTerm: string = '';
+
 
   constructor(private http: HttpClient, public dialog: MatDialog, private router: Router) { }
 
   ngOnInit() {
-    this.http.get<any[]>('http://localhost:8080/WasteWise/Admin/AllUsers')
-      .subscribe(users => {
-        this.users = users.filter(user => user.role && user.role.includes('DRIVER'));
-      });
+      this.loadDrivers();
   }
   
 
@@ -41,5 +40,33 @@ export class DriversListComponent {
   updateUser(id: number) {
     this.router.navigate(['/updateUser', id]);
   }
+  
+  loadDrivers() {
+    this.http.get<any[]>('http://localhost:8080/WasteWise/Admin/AllUsers')
+      .subscribe(users => {
+        this.users = users.filter(user => user.role && user.role.includes('DRIVER'));
+        this.searchDrivers(); // Filter drivers initially
+      });
+  }
+
+  searchDrivers() {
+    const searchTerm = this.searchTerm.toLowerCase().trim();
+    
+    if (searchTerm === '') {
+      this.loadDrivers(); 
+    } else {
+      this.users = this.users.filter(user =>
+        (user.firstName && user.firstName.toLowerCase().includes(searchTerm)) ||
+        (user.lastName && user.lastName.toLowerCase().includes(searchTerm)) ||
+        (user.id && user.id.toString().includes(searchTerm))
+      );
+    }
+  }
+  
+  resetSearch() {
+    this.searchTerm = ''; 
+    this.loadDrivers(); 
+  }
+  
   
 }

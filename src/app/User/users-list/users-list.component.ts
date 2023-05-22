@@ -12,16 +12,22 @@ import { ConfirmationDialogComponent } from '../../Admin/confirmation-dialog/con
 export class UsersListComponent implements OnInit {
 
   users!: any[];
+  searchTerm: string = '';
+
 
   constructor(private http: HttpClient, public dialog: MatDialog, private router: Router) { }
 
   ngOnInit() {
+    this.loadDrivers();
+  }
+  
+
+  loadDrivers() {
     this.http.get<any[]>('http://localhost:8080/WasteWise/Admin/AllUsers')
       .subscribe(users => {
         this.users = users.filter(user => user.role && user.role.includes('USER'));
       });
   }
-  
 
   deleteUser(id: number) {
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
@@ -39,6 +45,24 @@ export class UsersListComponent implements OnInit {
   }
   updateUser(id: number) {
     this.router.navigate(['/updateUser', id]);
+  }
+  searchDrivers() {
+    const searchTerm = this.searchTerm.toLowerCase().trim();
+    
+    if (searchTerm === '') {
+      this.loadDrivers(); 
+    } else {
+      this.users = this.users.filter(user =>
+        (user.firstName && user.firstName.toLowerCase().includes(searchTerm)) ||
+        (user.lastName && user.lastName.toLowerCase().includes(searchTerm)) ||
+        (user.id && user.id.toString().includes(searchTerm))
+      );
+    }
+  }
+  
+  resetSearch() {
+    this.searchTerm = ''; 
+    this.loadDrivers(); 
   }
 
 }

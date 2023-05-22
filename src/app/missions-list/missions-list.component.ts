@@ -11,16 +11,22 @@ import { ConfirmationDialogComponent } from '../Admin/confirmation-dialog/confir
 })
 export class MissionsListComponent {
   missions!: any[];
+  originalMissions!: any[]; // Variable to store the original list of missions
+  searchTerm: string = '';
 
-  constructor(private http: HttpClient, public dialog: MatDialog, private router: Router) { }
+  constructor(private http: HttpClient, public dialog: MatDialog, private router: Router) {}
 
   ngOnInit() {
-    this.http.get<any[]>('http://localhost:8080/WasteWise/Admin/AllMissions')
-      .subscribe(missions => {
-        this.missions = missions;
-      });
+    this.loadMissions();
   }
-  
+
+  loadMissions() {
+    this.http.get<any[]>('http://localhost:8080/WasteWise/Admin/AllMissions').subscribe(missions => {
+      this.missions = missions;
+      this.originalMissions = missions; // Save the original list of missions
+    });
+  }
+
   deleteMission(id: number) {
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
       width: '350px',
@@ -28,12 +34,32 @@ export class MissionsListComponent {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.http.delete(`http://localhost:8080/WasteWise/Admin/deleteMission/${id}`)
-          .subscribe(() => {
-            this.missions = this.missions.filter(mission => mission.id !== id);
-          });
+        this.http.delete(`http://localhost:8080/WasteWise/Admin/deleteMission/${id}`).subscribe(() => {
+          this.missions = this.missions.filter(mission => mission.id !== id);
+        });
       }
     });
   }
 
+  searchMissions() {
+    const searchTerm = this.searchTerm.toLowerCase().trim();
+  
+    if (searchTerm === '') {
+      this.missions = [...this.originalMissions]; 
+    } else {
+      this.missions = this.originalMissions.filter((mission: any) => {
+        return (
+          mission.id && mission.id.toString().includes(searchTerm) ||
+          mission.driverId && mission.driverId.toString().includes(searchTerm) ||
+          mission.subscriptionId && mission.subscriptionId.toString().includes(searchTerm)
+        );
+      });
+    }
+  }
+  
+
+  resetSearch() {
+    this.searchTerm = ''; 
+    this.loadMissions(); 
+  }
 }

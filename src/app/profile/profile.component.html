@@ -2,15 +2,14 @@
 
 <div class="container-fluid">
   <div class="row">
-    <!-- First card - Profile Information -->
     <div class="col-md-6">
       <div class="card">
         <div class="card-body text-center">
           <div class="avatar-container" (click)="onClickFileInput()">
             <img class="user-info" *ngIf="user.photo" [src]="'data:image/png;base64,' + user.photo" alt="User photo">
             <div *ngIf="!user.photo" class="avatar-placeholder">
+              <span>Click to upload photo</span>
             </div>
-            <span>Click to upload photo</span>
             <input id="fileInput" type="file" class="file-input" (change)="onFileSelected($event)" accept=".jpg,.jpeg,.png" hidden>
           </div>              
           <h2 class="mt-3">{{user.firstName}} {{user.lastName}}</h2>

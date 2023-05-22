@@ -6,7 +6,6 @@ body{
     margin-left: calc((96vw - 100%) / 2);
     margin-right: calc((95.3vw - 100%) / 2);
     overflow: hidden !important;
-    margin-bottom: 20px;
   }
   .background-img{
    width: 500px;
@@ -104,6 +103,7 @@ body{
       margin-top: 20px;
       color: #fff;
       box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+      margin-bottom: 20px;
     }
     button.return:hover {
       background-color: #323336;
